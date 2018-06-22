@@ -29,7 +29,7 @@ authRoutes.post("/signup", (req, res, next) => {
   const password = req.body.password;
   const rol = req.body.role;
   if (username === "" || password === "") {
-    res.render("auth/signup", { message: "Indicate username and password" });
+    res.render("auth/signup", { message: "Please enter your username and password" });
     return;
   }
 

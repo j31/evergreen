@@ -28,6 +28,7 @@ const admin = new User({
 User.deleteMany()
   .then(() => User.create(admin))
   .then(userDocuments => {
+    console.log("Successfully seeded MongoDB")
     mongoose.connection.close()
   })
   .catch(err => {throw(err)})
