@@ -4,7 +4,7 @@
 - jQuery, Bootstrap CDNs are included by default in layout.hbs
 - Modify or remove navbar & footer partials
 - Seeds.js creates admin user (login:admin)
-- Example /admin page is protected with isAdmin middleware
+- Example /admin page is protected with isAdmin custom middleware
 - Example /protected page is protected with ensureLoggedIn()
 
 ## Notes
