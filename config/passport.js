@@ -4,7 +4,6 @@ const User          = require('../models/User');
 const bcrypt        = require('bcrypt');
 
 
-
 passport.serializeUser((loggedInUser, cb) => {
   cb(null, loggedInUser._id);
 });

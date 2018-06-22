@@ -36,6 +36,7 @@
  - heroku git:remote -a PROJECTNAME
  - git push heroku master
  - heroku addons:create mongolab:sandbox
+ - heroku run node bin/seeds.js
  - https://PROJECTNAME.herokuapp.com/
 
 
