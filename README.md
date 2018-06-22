@@ -3,8 +3,14 @@
 - Give Mongo DBNAME in .env
 - jQuery, Bootstrap CDNs are included by default in layout.hbs
 - Modify or remove navbar & footer partials
+- Seeds.js creates admin user (login:admin)
+- Example /admin page is protected with isAdmin middleware
+- Example /protected page is protected with ensureLoggedIn()
 
 ## Notes
+- Added isAdmin to user model
+- Added ensure-logged-in to package.json
+- Added middleware folder, and isAdmin authorization middlware
 - Update hoek package to v5
 - Updated to .connection.openUri to avoid Mongo deprication error
 - Added config folder and consolidated passport configs
