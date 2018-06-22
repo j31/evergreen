@@ -1,5 +1,5 @@
 ## To Use
-- Fork, clone, cd new-project, npm install
+- Clone, cd new-project, npm install
 - Give Mongo DBNAME in .env
 - jQuery, Bootstrap CDNs are included by default in layout.hbs
 - Modify or remove navbar & footer partials
@@ -14,8 +14,8 @@
 - Added bootstrap Navbar partial, and simple footer partial
 - Changed Auth routes to root
 - Public asset folders renamed to: img, css, js
-- Removed locals.title to avoid .title and simplify
-- Fixed a few typos: login link, removed role: "teacher" param...
+- Removed locals.title to avoid .title conflict
+- Fixed a few typos: login link, removed role: "teacher" param, etc..
  
  ## Dev
  - npm run dev
