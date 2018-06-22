@@ -5,7 +5,7 @@
 - Give Mongo DBNAME in .env
 - jQuery, Bootstrap CDNs are included by default in layout.hbs
 - Modify or remove navbar & footer partials
-- Seeds.js creates user: admin (login:admin)
+- node bin/seeds.js to seed DB with user: admin (login:admin)
 - Example /admin page is protected with isAdmin custom middleware
 - Example /protected page is protected with ensureLoggedIn()
 
