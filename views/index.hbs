@@ -1,2 +1,37 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="container">
+
+  <h1>New Project</h1>
+
+  {{#if username }}
+  Logged in as: <strong>{{ username  }}</strong> | <a href="/logout">Logout</a>
+  {{else}}
+  <a href="/signup">Signup</a> | <a href="/login">Login</a>
+  {{/if}}
+
+  <br><br><br>
+
+  To Use:
+  <ul>
+    <li>Fork, clone, cd new-project, npm install</li>
+    <li>Give Mongo DBNAME in .env</li>
+    <li>jQuery, Bootstrap CDNs are included by default in layout.hbs</li>
+    <li>Modify or remove navbar & footer partials</li>
+  </ul>
+
+  <br>
+
+  Notes:
+  <ul>
+    <li>Updated to .connection.openUri to avoid Mongo deprication error</li>
+    <li>Added config folder and consolidated passport configs</li>
+    <li>Added jQuery and Bootstrap CDN in layout.hbs</li>
+    <li>Added middleware to pass username to locals</li>
+    <li>Added partials folder and registered in app.js</li>
+    <li>Added bootstrap Navbar partial, and simple footer partial</li>
+    <li>Changed Auth routes to root</li>
+    <li>Public asset folders renamed to: img, css, js</li>
+    <li>Removed locals.title to avoid .title and simplify</li>
+    <li>Fixed a few typos: login link, removed role: "teacher" param...</li>
+  </ul>
+
+</div>

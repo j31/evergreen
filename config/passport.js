@@ -1,7 +1,25 @@
-const passport = require('passport');
+const passport      = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User          = require('../models/User');
 const bcrypt        = require('bcrypt');
+
+
+
+passport.serializeUser((loggedInUser, cb) => {
+  cb(null, loggedInUser._id);
+});
+
+passport.deserializeUser((userIdFromSession, cb) => {
+  User.findById(userIdFromSession, (err, userDocument) => {
+    if (err) {
+      cb(err);
+      return;
+    }
+
+    cb(null, userDocument);
+  });
+});
+
 
 passport.use(new LocalStrategy((username, password, next) => {
   User.findOne({ username }, (err, foundUser) => {
@@ -23,3 +41,9 @@ passport.use(new LocalStrategy((username, password, next) => {
     next(null, foundUser);
   });
 }));
+
+
+module.exports = (app)  => {
+  app.use(passport.initialize());
+  app.use(passport.session());
+}
