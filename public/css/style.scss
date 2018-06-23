@@ -1,8 +1,134 @@
 
-//  Used for debugging layout issues
 // * {
 //   border: 1px solid red;
 // }
 
 
 
+#logo {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+}
+
+#logo-large {
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+}
+
+.index-banner {
+  height:100vh;
+  background: url('../img/header.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+.index-text {
+  margin-top:5%;
+}
+
+#about, #try-it {
+  padding: 5% 0px;
+}
+
+.green-dash {
+  width: 50px;
+  border: 2px solid green;
+}
+
+.home-divider {
+  width: 75%;
+  border: 1px solid green;
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+  color: grey; 
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.game-btn {
+  width: 200px;
+  margin: 5px 15px;
+}
+
+.score {
+  min-width: 200px;
+  margin: 15px 0;
+  padding: 15px 0;
+  background: #E9ECEF;
+  border: 1px solid grey;
+}
+
+.progress-bars {
+  min-width: 200px;
+  margin: 15px 0;
+  padding: 15px 0;
+  background: #E9ECEF;
+  /* border: 1px solid grey; */
+}
+
+.answer {
+  min-height: 190px;
+}
+
+.answer-text {
+  font-size: 1.3rem;
+}
+
+
+.quiz-answer, .game-answer {
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 5px;
+  margin-bottom: 5px;
+}
+
+.fa-user-circle {
+  color: #0E7E1266; 
+}
+
+.fa-check-circle {
+  color: lightgreen;
+}
+
+.fa-times-circle {
+  color: red;
+}
+
+#nav-links {
+  margin-right: 20px;
+}
+
+.cat-label {
+  text-align: left;
+  padding-left: 2px;
+}
+
+#game-score {
+  font-family: monospace;
+  background-color: lightgreen;
+  margin-right: 40px;
+  padding: 5px 20px;
+}
+
+#game-clock {
+  font-family: monospace;
+  background-color: lightgreen;
+  margin-right: 40px;
+  padding: 5px;
+}
+
+.cat-card {
+  margin: 10px 10px;
+}
+
+.home-section {
+  padding-top: 20px;
+}

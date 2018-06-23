@@ -1,15 +1,94 @@
-<div class="container">
-
-  <h1>New Project</h1>
-
-  {{#if username }}
-  Logged in as: <strong>{{ username  }}</strong> | <a href="/logout">Logout</a>
-  {{else}}
-  <a href="/signup">Signup</a> | <a href="/login">Login</a>
-  {{/if}}
-
-  <br><br><br>
-
-  See README for notes on usage.
-
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Welcome to Evergreen</title>
+  </head>
+  <body>
+    
+    
+    <header class="masthead text-center d-flex index-banner">
+      <img id="logo" src="img/evergreen-logo.png" alt="logo">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-10 mx-auto index-text">
+            <h1><strong>EXPAND YOUR WORLD</strong></h1>
+            <p class="text-faded mb-5">Evergreen helps you learn the most valuable facts about the world.</p>
+            <a class="btn btn-outline-success btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            <a class="btn btn-success btn-xl js-scroll-trigger" href="/home">Try it Now</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    
+    
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <img id="logo-large" src="img/evergreen-logo.png" alt="logo">
+            <h2 class="section-heading">How Evergreen Works</h2>
+            <hr class="green-dash">
+            <p class="text-faded mb-5">Evergreen helps you learn the most valuable facts about the world.  We process thousands of sources to identify knowledge that is durable and connected.  As you use Evergreen, the software determines what you know and helps you quickly close any gaps of knowledge that you may have.  Evergreen is for English-speaking students or adults of any age.  </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-success mb-3 sr-icons"></i>
+              <h3 class="mb-3">High-value Knowledge</h3>
+              <p class="text-muted mb-0">We use advanced algorithms to identify the most valuable Evergreen knowledge.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-success mb-3 sr-icons"></i>
+              <h3 class="mb-3">Continuously Updated</h3>
+              <p class="text-muted mb-0">We continuously add and replace information so that you will stay current.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-success mb-3 sr-icons"></i>
+              <h3 class="mb-3">Individualized Learning</h3>
+              <p class="text-muted mb-0">We apply learning science to help you make rapid gains in your general knowledge.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-heart text-success mb-3 sr-icons"></i>
+              <h3 class="mb-3">Rewarding Progress</h3>
+              <p class="text-muted mb-0">Refresh, improve and maintain your level of general knowledge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section id="try-it" class="bg-success">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">We're in Beta!</h2>
+            <hr class="light green-dash">
+            <p class="text-faded mb-4">Joining Evergreen is fast, free and easy.  We'd love to hear what you think...</p>
+            
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="/home">Try it Now!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </body>
+  </html>
