@@ -4,6 +4,10 @@ const mongoose = require('mongoose');
 const User     = require('../models/User');
 const bcrypt   = require("bcrypt");
 
+//
+// SEEDING ADMIN USER
+//
+
 // Connect to DB
 mongoose
   .connection.openUri(process.env.MONGODB_URI)
@@ -32,3 +36,6 @@ User.deleteMany()
     mongoose.connection.close()
   })
   .catch(err => {throw(err)})
+
+
+

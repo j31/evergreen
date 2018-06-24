@@ -9,32 +9,13 @@
     <title>Evergreen Home</title>
   </head>
   <body>
-    <audio id="click"><source src="../audio/click.mp3" type="audio/mpeg" /></audio>
-    <audio id="buzzer"><source src="../audio/buzzer.mp3" type="audio/mpeg" /></audio>
-    <audio id="correct"><source src="../audio/correct.mp3" type="audio/mpeg" /></audio>
-    <audio id="wrong"><source src="../audio/wrong.mp3" type="audio/mpeg" /></audio>
     
+    <audio id="click"><source src="/audio/click.mp3" type="audio/mpeg" /></audio>
+    <audio id="buzzer"><source src="/audio/buzzer.mp3" type="audio/mpeg" /></audio>
+    <audio id="correct"><source src="/audio/correct.mp3" type="audio/mpeg" /></audio>
+    <audio id="wrong"><source src="/audio/wrong.mp3" type="audio/mpeg" /></audio>
     
-    <div id="navigation">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="../index.html">
-          <img id="logo" src="../img/evergreen-logo.png" alt="evergreen">Evergreen
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav" id="nav-links">
-            <a class="nav-item nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="settings.html">Settings</a>
-          </div>
-          <span class="navbar-text" id="user-nav">
-            <i class="fas fa-user-circle"></i> John <i class="fas fa-angle-down"></i>
-          </span>
-        </div>
-      </nav>
-    </div>
-    
+  
     
     <section id="home-menu">
       <div class="container text-center">
@@ -120,14 +101,12 @@
       
       
       
-      
-      
-      
+    
       <!--
         GAME SECTION ################################################################
       -->
       <section id="game" class="d-none">
-        <br><br>
+        
         <div class="container">
           <div class="row">
             <div class="col-md-5 text-right">
@@ -344,6 +323,14 @@
         </div>
       </section>
       
+      
+      
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+      <script id="dictionary_data" type="text/javascript">{{{dictionary}}}</script>
+      <script id="username_data" type="text/javascript">"{{{username}}}"</script>
+      <script id="userk_data" type="text/javascript">{{{userk}}}</script>
+
 
     </body>
     </html>
