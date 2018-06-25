@@ -3,6 +3,7 @@ const Schema   = mongoose.Schema;
 
 const termSchema = new Schema({
   term: {type: String, required: true, unique: true}, 
+  termId: Number, 
   def: {type: String},
   cat: {type: String, required: true},
 }, {

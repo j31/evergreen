@@ -7,6 +7,7 @@ const userSchema = new Schema({
   isAdmin:  {type: Boolean, default: false},
   accountStatus: {type: String}, enum: ["pending", "confirmed"],
   knowledge: [],
+  currentCategory: String,
 }, {
   timestamps: {
     createdAt: 'created_at',

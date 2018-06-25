@@ -35,7 +35,7 @@ router.get('/home', ensureLoggedIn(), (req, res, next) => {
 router.patch('/knowledge/:username', function(req, res) {
   var username = req.params.username;
   var knowledge = req.body;
-  console.log("DEBUG username ", username)
+
   User.findOneAndUpdate({username: username}, {knowledge: knowledge}, {upsert:true}, function(err, doc){
     if (err) return res.send(500, { error: err });
     return res.send("succesfully saved");
