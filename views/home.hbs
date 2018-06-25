@@ -57,6 +57,8 @@
               <option value="Sayings">Sayings</option>
               <option value="Business & Economics">Business & Economics</option>
             </select>
+            <br>
+            Score: <strong><span id="category-score"></span></strong>%
           </div>
 
 
@@ -64,11 +66,18 @@
 
           
           <!-- CENTER -->
-          <div class="col-md-3 col-sm-6">
+          {{!-- <div class="col-md-3 col-sm-6">
             <h5 class="home-section">Level</h5>
             <br>
             <img src="../img/level-1-icon.png" alt="" width="120">
+          </div> --}}
+
+          <div class="col-md-3 col-sm-6">
+            <h5 class="home-section">Overall Score</h5>
+            <br>
+            <strong><span id="overall-score"></span></strong>%
           </div>
+
           
           <!-- RIGHT SIDE -->
           <div class="col-md-12 col-lg-3">
@@ -321,7 +330,7 @@
         </div>
       </section>
       
-      
+      <script src='/js/practice.js'></script>
       
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     

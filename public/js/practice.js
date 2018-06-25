@@ -1,11 +1,7 @@
 // Wait for DOM to load
 $(document).ready(function() {
   
-  
-  
-  
-  
-  
+
   
   // Get dictionary terms passed to view, and convert back to object
   var dataFromView = $('#dictionary_data').html();
@@ -19,7 +15,7 @@ $(document).ready(function() {
   var knowledge = userk[0].knowledge; 
   console.log("KNOWLEDGE: ", knowledge)
   
-  
+
   
   ///// START OF DATA
   
@@ -285,17 +281,31 @@ $(document).ready(function() {
       console.log(error)
     })
     
+    // current category score 
+
+    // get strength scores for current category
+    var categoryStrengths = ev.user.knowledge.filter( t => t.cat === ev.user.currentCategory)
+
+    // reduce to sum of strength scores
+    var userStrength = categoryStrengths.reduce((a,b) => a + b.strength, 0);
     
+    // calculate overall %
+    ev.score = Math.round(userStrength / ( categoryStrengths.length * 5 )*100);
     
-    
-    // find sum of user strength scores
+    // update Current Category score in DOM
+    $('#category-score').text(ev.score);
+
+    // overall score 
+
+    // reduce to sum of strength scores
     var userStrength = ev.user.knowledge.reduce((a,b) => a + b.strength, 0);
     
-    // divide by total possible strength scores to get %, save in session object
+    // calculate overall %
     ev.score = Math.round(userStrength / ( ev.user.knowledge.length * 5 )*100);
     
-    // update score in DOM
-    $('#score').text(ev.score);
+    // update Current Category score in DOM
+    $('#overall-score').text(ev.score);
+
   }
   
   
@@ -305,6 +315,7 @@ $(document).ready(function() {
     var selected = $(this).val();
     ev.user.currentCategory = selected     
     console.log("NEW currentCat ", ev.user.currentCategory)
+    ev.updateScore();
   });
   
   
@@ -317,12 +328,19 @@ $(document).ready(function() {
     var term = undefined;
     
     while (!term) {
+      console.log("IN GET QUESTION currentCat ", ev.user.currentCategory)
       var term = ev.user.knowledge.find(function(t) {
-        return (t.cat === ev.user.currentCategory && t.strength === i && t.lastTime === undefined 
-        )});
+        console.log("t.lastTime ", t.lastTime );
+        console.log("Date.now() ", Date.now() );
+        console.log("t ", t);
+        return (t.cat === ev.user.currentCategory && t.strength === i)
+          
+          // ( t.lastTime === undefined || t.lastTime > Date.now() + 1000 )
+        });
+        
         i++
-        if (i>5) {
-          term = "something";
+        if (i>4) {
+          term = "ERROR FINDING TERM";
           console.log("NO TERM FOUND")
         }
       }
