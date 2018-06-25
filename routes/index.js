@@ -5,7 +5,7 @@ const {ensureLoggedIn, ensureLoggedOut} = require("connect-ensure-login");
 const Term = require('../models/Term');
 const User = require('../models/User');
 
-/* GET index page */
+/* GET landing (index) page */
 router.get('/', (req, res, next) => {
   if (req.user)
     res.redirect('/home');
@@ -14,9 +14,14 @@ router.get('/', (req, res, next) => {
 });
 
 
-
 /* GET home page */
 router.get('/home', ensureLoggedIn(), (req, res, next) => {
+  res.render('home');
+});
+
+
+/* GET practice page */
+router.get('/practice', ensureLoggedIn(), (req, res, next) => {
   var reqUser = req.user.username
   Promise.all([
     Term.find(),
@@ -26,7 +31,7 @@ router.get('/home', ensureLoggedIn(), (req, res, next) => {
     
     var dictionary = JSON.stringify(results[0]);
     var userk = JSON.stringify(results[1]);
-    res.render('home', {dictionary, userk});
+    res.render('practice', {dictionary, userk});
   })
   .catch(error => { next(error) })
 });
@@ -42,16 +47,25 @@ router.patch('/knowledge/:username', function(req, res) {
   });
 });
 
+/* GET explore page */
+router.get('/explore', ensureLoggedIn(), (req, res, next) => {
+  res.render('explore');
+});
 
 /* GET settings page */
 router.get('/settings', ensureLoggedIn(), (req, res, next) => {
   res.render('settings');
 });
 
-// /* GET profile page */
-// router.get('/profile', ensureLoggedIn(), (req, res, next) => {
-//   res.render('profile');
-// });
+/* GET profile page */
+router.get('/profile', ensureLoggedIn(), (req, res, next) => {
+  res.render('profile');
+});
+
+/* GET progress page */
+router.get('/progress', ensureLoggedIn(), (req, res, next) => {
+  res.render('progress');
+});
 
 /* GET admin page */
 router.get('/admin', isAdmin(), (req, res, next) => {
