@@ -58,9 +58,25 @@ router.get('/settings', ensureLoggedIn(), (req, res, next) => {
 });
 
 /* GET profile page */
-router.get('/profile', ensureLoggedIn(), (req, res, next) => {
-  res.render('profile');
+router.get('/profile/:id', ensureLoggedIn(), (req, res, next) => {
+  User.findOne ({ username: req.params.id })
+  .then( user => {
+    res.render('profile', { user });
+  })
+  .catch(error => { next(error) })
 });
+
+router.post('/profile/:id', ensureLoggedIn(), (req, res, next) => {
+  let { username } = req.body;
+  User.findByIdAndUpdate({ _id: req.params.id }, { username })
+  .then((user) => {
+    res.redirect('/home')
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+});
+
 
 /* GET progress page */
 router.get('/progress', ensureLoggedIn(), (req, res, next) => {

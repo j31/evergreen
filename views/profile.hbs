@@ -1,0 +1,30 @@
+
+<div class="container">
+
+<br>
+<h2>Profile</h2>
+<br>
+
+<form action="/profile/{{user._id}}" method="POST">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" name="username" value="{{username}}"> 
+  </div>
+  <br>
+
+  {{!-- Have to re-incrypt password --}}
+    {{!-- <div>
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+  </div> --}}
+
+  <div>
+
+  </div>
+  <br>
+  <div>
+    <input type="submit" value="Update Profile">
+  </div>
+</form>
+
+</div>
