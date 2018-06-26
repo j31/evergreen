@@ -49,7 +49,18 @@ router.patch('/knowledge/:username', function(req, res) {
 
 /* GET explore page */
 router.get('/explore', ensureLoggedIn(), (req, res, next) => {
-  res.render('explore');
+  var reqUser = req.user.username
+  Promise.all([
+    Term.find(),
+    User.find({username: reqUser})
+    ])
+  .then( results => {
+    
+    var dictionary = JSON.stringify(results[0]);
+    var userk = JSON.stringify(results[1]);
+    res.render('explore', {dictionary, userk});
+  })
+  .catch(error => { next(error) })
 });
 
 /* GET settings page */

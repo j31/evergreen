@@ -339,12 +339,6 @@ $(document).ready(function() {
   
   // Update currently praticing on change
   
-  $("#currentlyPracticing").change(function(){
-    var selected = $(this).val();
-    ev.user.currentCategory = selected     
-    console.log("NEW currentCat ", ev.user.currentCategory)
-    ev.updateScore();
-  });
   
   $(".cat-card-link").click(function() {
     var catId = this.id
@@ -1011,17 +1005,17 @@ $(document).ready(function() {
       ev.updateScore()
       
       if (ev.state === "flashcards") {
-        var html = '<h1>Results...</h1><br><h3>You answered ' + ev.gameScore + ' correctly.</h3><h4>Your new Evergreen score is ' + ev.score + '%</h4>'
+        var html = '<h1>Results...</h1><br><h3>You answered ' + ev.gameScore + ' correctly.</h3>'
         $('.question').html(html);
       }
       
       if (ev.state === "quiz") {
-        var html = '<h1>Quiz result</h1><br><h3>You answered ' + ev.gameScore + ' correctly.</h3><h4>Your new Evergreen score is ' + ev.score + '%</h4>'
+        var html = '<h1>Quiz result</h1><br><h3>You answered ' + ev.gameScore + ' correctly.</h3>'
         $('.question').html(html);
       }
       
       if (ev.state === "game") {
-        var html = '<h1>Game over</h1><br><h3>You answered ' + ev.gameScore + ' correctly.</h3><h4>Your new Evergreen score is ' + ev.score + '%</h4>'
+        var html = '<h1>Game over</h1><br><h3>You answered ' + ev.gameScore + ' correctly.</h3>'
         $('.question').html(html);
       }
       
