@@ -17,7 +17,7 @@ mongoose.Promise = Promise;
 mongoose
   .connection.openUri(process.env.MONGODB_URI)
   .then(() => {
-    console.log('Connected to Mongo!')
+    // console.log('Connected to Mongo!')
   }).catch(err => {
     console.error('Error connecting to mongo', err)
   });

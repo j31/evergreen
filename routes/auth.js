@@ -2,7 +2,7 @@ const express = require("express");
 const passport = require('passport');
 const authRoutes = express.Router();
 const User = require("../models/User");
-
+const Term = require("../models/Term");
 
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
@@ -45,30 +45,29 @@ authRoutes.post("/signup", (req, res, next) => {
     const salt = bcrypt.genSaltSync(bcryptSalt);
     const hashPass = bcrypt.hashSync(password, salt);
 
-    
     var initKnowledge = []
-    for (i=1; i<54; i++) {
-      initKnowledge.push({ _termId: i, strength: 0, cat:"Sayings"})
-    }
-    for (i=54; i<77; i++) {
-      initKnowledge.push({ _termId: i, strength: 0, cat:"Business & Economics"})
-    }
+    Term.find({}, function(err, terms) {
+      terms.forEach(function(term) {
+        initKnowledge.push({ _id: term._id, cat: term.cat, strength: 0})
+      });
 
-    const newUser = new User({
-      username,
-      password: hashPass,
-      knowledge: initKnowledge
-    });
+      const newUser = new User({
+        username,
+        password: hashPass,
+        knowledge: initKnowledge
+      });
 
-    newUser.save((err) => {
-      if (err) {
-        res.render("auth/signup", { message: "Something went wrong" });
-      } else {
-        res.redirect("/login");
-      }
+      newUser.save((err) => {
+        if (err) {
+          res.render("auth/signup", { message: "Something went wrong" });
+        } else {
+          res.redirect("/login");
+        }
+      });
     });
   });
 });
+
 
 authRoutes.get("/logout", (req, res) => {
   req.logout();

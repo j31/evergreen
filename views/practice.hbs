@@ -5,6 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+
+
   </head>
   <body>
     
@@ -49,7 +57,7 @@
 
 
 
-          <div class="form-group">
+          {{!-- <div class="form-group">
           <label for="exampleFormControlSelect1"><h5>Currently Practicing</h5></label>
             <select class="form-control" name="currentlyPracticing" id="currentlyPracticing">
               <option value="Sayings">Sayings</option>
@@ -57,10 +65,13 @@
             </select>
             <br>
             Score: <strong><span id="category-score"></span></strong>%
-          </div>
+          </div> --}}
 
-
-
+<div class="col-md-3 col-sm-6">
+  <h5>Currently Practicing:</h5><br>
+  Category: <strong><span id="current-category"></span></strong><br>
+  Score: <strong><span id="category-score"></span></strong>%
+</div>
 
           
           <!-- CENTER -->
@@ -78,10 +89,10 @@
 
           
           <!-- RIGHT SIDE -->
-          <div class="col-md-12 col-lg-3">
+          {{!-- <div class="col-md-12 col-lg-3">
             <h5 class="home-section">Achievements</h5>
             <img src="../img/acheivements.png" alt="" width="200">
-          </div>
+          </div> --}}
           
         </div>
         
@@ -110,7 +121,7 @@
         GAME SECTION ################################################################
       -->
       <section id="game" class="d-none">
-        
+        <br>
         <div class="container">
           <div class="row">
             <div class="col-md-5 text-right">
@@ -208,7 +219,7 @@
         QUIZ SECTION ################################################################
       -->
       <section id="quiz" class="d-none">
-       
+       <br>
         <div class="container">
           <div class="row">
             <div class="col-md-9 text-right">
@@ -298,7 +309,7 @@
         FLASH CARDS SECTION ############################################################
       -->
       <section id="flash-cards" class="d-none">
-      
+      <br>
         <div class="container">
           <div class="row">
             <div class="col-md-9 text-right">

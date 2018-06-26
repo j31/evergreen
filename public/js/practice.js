@@ -2,7 +2,6 @@
 $(document).ready(function() {
   
 
-  
   // Get dictionary terms passed to view, and convert back to object
   var dataFromView = $('#dictionary_data').html();
   var dictionary = JSON.parse(dataFromView);
@@ -13,34 +12,36 @@ $(document).ready(function() {
   var dataFromView = $('#userk_data').html();
   var userk = JSON.parse(dataFromView);
   var knowledge = userk[0].knowledge; 
-  console.log("KNOWLEDGE: ", knowledge)
   
-
   
   ///// START OF DATA
   
   // Seed data for categories
-  var categories = [
-    { category: "Proverbs",             catStrength: 7,    imgFileName: "cat_proverbs.jpg"     },
-    { category: "Mythology",            catStrength: 17,    imgFileName: "cat_mythology.jpg"   },
-    { category: "Geography",            catStrength: 12,   imgFileName: "cat_geography.jpg"    },
-    { category: "Technology",           catStrength: 16,   imgFileName: "cat_technology.jpg"   },
-    { category: "Fine Arts",            catStrength: 27,   imgFileName: "cat_fine_arts.jpg"    },
-    { category: "Philosophy",           catStrength: 34,   imgFileName: "cat_philosophy.jpg"   },
-    { category: "Literature",           catStrength: 26,   imgFileName: "cat_literature.jpg"   },
-    { category: "Life Sciences",        catStrength: 29,   imgFileName: "cat_life_science.jpg"    },
-    { category: "Medicine and Health",  catStrength: 65,   imgFileName: "cat_medicine.png"        },
-    { category: "Politics",             catStrength: 67,   imgFileName: "cat_politics.jpg"     },
-    { category: "Religion",             catStrength: 44,   imgFileName: "cat_religion.jpg"     },
-    { category: "Modern History",       catStrength: 24,   imgFileName: "cat_mod_history.jpg"  },
-    { category: "Business & Economics", catStrength: 56,   imgFileName: "cat_business.jpg"     },
-    { category: "Classical Music",      catStrength: 55,   imgFileName: "cat_clas_music.jpg"   },
-    { category: "Cont. History",        catStrength: 76,   imgFileName: "cat_cont_history.jpg" },
-    { category: "Pre-modern History",   catStrength: 23,   imgFileName: "cat_pre_mod_history.jpg" },
-    { category: "Physical Sciences",    catStrength: 35,   imgFileName: "cat_phys_science.jpg"    },
-    { category: "Social Sciences",      catStrength: 42,   imgFileName: "cat_social_science.jpg"  },
-    { category: "Earth Sciences",       catStrength: 23,   imgFileName: "cat_earth_science.jpg"   },
+  var categoriesEnum = [
+    { _id: 0, group: "Writings", category: "Sayings",             catStrength: 7,    imgFileName: "cat_proverbs.jpg"     },
+    { _id: 1, group: "Writings", category: "Mythology",            catStrength: 17,   imgFileName: "cat_mythology.jpg"   },
+    { _id: 2, group: "Writings", category: "Philosophy",           catStrength: 34,   imgFileName: "cat_philosophy.jpg"   },
+    { _id: 3, group: "Writings", category: "Literature",           catStrength: 26,   imgFileName: "cat_literature.jpg"   },
+    { _id: 4, group: "Writings", category: "Religion",             catStrength: 44,   imgFileName: "cat_religion.jpg"     },
+
+    { _id: 5, group: "World", category: "Geography",            catStrength: 12,   imgFileName: "cat_geography.jpg"    },
+    { _id: 6, group: "World", category: "Politics",             catStrength: 67,   imgFileName: "cat_politics.jpg"     },
+    { _id: 7, group: "World", category: "Modern History",       catStrength: 24,   imgFileName: "cat_mod_history.jpg"  },
+    { _id: 8, group: "World", category: "Cont. History",        catStrength: 76,   imgFileName: "cat_cont_history.jpg" },
+    { _id: 9, group: "World", category: "Pre-modern History",   catStrength: 23,   imgFileName: "cat_pre_mod_history.jpg" },
+
+    { _id: 10, group: "Sciences", category: "Technology",           catStrength: 16,   imgFileName: "cat_technology.jpg"   },
+    { _id: 11, group: "Sciences", category: "Life Sciences",        catStrength: 29,   imgFileName: "cat_life_science.jpg"    },
+    { _id: 12, group: "Sciences", category: "Medicine and Health",  catStrength: 65,   imgFileName: "cat_medicine.png"        },
+    { _id: 13, group: "Sciences", category: "Business & Economics", catStrength: 56,   imgFileName: "cat_business.jpg"     },
+    { _id: 14, group: "Sciences", category: "Physical Sciences",    catStrength: 35,   imgFileName: "cat_phys_science.jpg"    },
+    { _id: 15, group: "Sciences", category: "Social Sciences",      catStrength: 42,   imgFileName: "cat_social_science.jpg"  },
+    { _id: 16, group: "Sciences", category: "Earth Sciences",       catStrength: 23,   imgFileName: "cat_earth_science.jpg"   },
+
+    { _id: 17, group: "Arts", category: "Fine Arts",            catStrength: 27,   imgFileName: "cat_fine_arts.jpg"    },
+    { _id: 18, group: "Arts", category: "Classical Music",      catStrength: 55,   imgFileName: "cat_clas_music.jpg"   }
   ]
+  
   
   
   ///// END OF DATA
@@ -50,11 +51,11 @@ $(document).ready(function() {
   function User (name, knowledge) {
     this.username = name
     this.knowledge = knowledge
-    this.currentCategory = "Sayings"
+    this.currentCategory = categoriesEnum[0]
   };
   
-  //  Instantiate user1
-  var user1 = new User (username, knowledge);
+  //  Instantiate user
+  var user = new User (username, knowledge);
   
   
   // Main application Class
@@ -73,14 +74,22 @@ $(document).ready(function() {
     this.intervalId = 0;
   };
   
-  console.log("USER1 ", user1)
   
   //  Instantiate Evergreen session object
-  
-  
-  
-  var ev = new Evergreen (user1, dictionary );
+  var ev = new Evergreen (user, dictionary );
   console.log("ev ", ev)
+
+
+
+
+    // INJECT CATEGORY CARDS ONTO HOME PAGE
+    var html = '<div class="row justify-content-center">'
+    for (i in categoriesEnum) {
+      html += '<div class="col-xs-6"><div class="card cat-card" style="width: 9rem;"><img class="card-img-top" src="../img/categories/' + categoriesEnum[i].imgFileName + '" alt="Card image cap"><div class="card-body"><h6 class="card-title">' + categoriesEnum[i].category + '</h6><p class="card-text"><strong><span id="#">' + categoriesEnum[i].catStrength + '</span></strong> %</p></div></div></div>'
+    }
+    html += '</div>'
+    $('#cat-cards').html(html)
+
   
   
   //  Listen on home-menu buttons (Flashcards...)
@@ -270,42 +279,47 @@ $(document).ready(function() {
   Evergreen.prototype.updateScore = function () {
     
     
-    
     //SAVE user knowledge to MongoDB
     
     axios.patch(`http://localhost:3000/knowledge/${username}`, knowledge)
     .then(response => {
       console.log("User knowledge successfully updated")
+      console.log("knowledge ", knowledge)
+
+        // current category score 
+
+        // get strength scores for current category
+        var categoryStrengths = ev.user.knowledge.filter( t => t.cat === ev.user.currentCategory.category)
+
+        console.log("DEBUG categoryStrengths ", categoryStrengths)
+
+        // reduce to sum of strength scores
+        var userStrength = categoryStrengths.reduce((a,b) => a + b.strength, 0);
+        
+        console.log("DEBUG userStrength ", userStrength)
+
+
+        // calculate overall %
+        ev.score = Math.round(userStrength / ( categoryStrengths.length * 5 )*100);
+        
+        // update Current Category score in DOM
+        $('#category-score').text(ev.score);
+
+        // overall score 
+
+        // reduce to sum of strength scores
+        var userStrength = ev.user.knowledge.reduce((a,b) => a + b.strength, 0);
+        
+        // calculate overall %
+        ev.score = Math.round(userStrength / ( ev.user.knowledge.length * 5 )*100);
+        
+        // update Current Category score in DOM
+        $('#overall-score').text(ev.score);
     })
     .catch(error => {
       console.log(error)
     })
     
-    // current category score 
-
-    // get strength scores for current category
-    var categoryStrengths = ev.user.knowledge.filter( t => t.cat === ev.user.currentCategory)
-
-    // reduce to sum of strength scores
-    var userStrength = categoryStrengths.reduce((a,b) => a + b.strength, 0);
-    
-    // calculate overall %
-    ev.score = Math.round(userStrength / ( categoryStrengths.length * 5 )*100);
-    
-    // update Current Category score in DOM
-    $('#category-score').text(ev.score);
-
-    // overall score 
-
-    // reduce to sum of strength scores
-    var userStrength = ev.user.knowledge.reduce((a,b) => a + b.strength, 0);
-    
-    // calculate overall %
-    ev.score = Math.round(userStrength / ( ev.user.knowledge.length * 5 )*100);
-    
-    // update Current Category score in DOM
-    $('#overall-score').text(ev.score);
-
   }
   
   
@@ -330,45 +344,44 @@ $(document).ready(function() {
     while (!term) {
       console.log("IN GET QUESTION currentCat ", ev.user.currentCategory)
       var term = ev.user.knowledge.find(function(t) {
-        console.log("t.lastTime ", t.lastTime );
-        console.log("Date.now() ", Date.now() );
-        console.log("t ", t);
-        return (t.cat === ev.user.currentCategory && t.strength === i)
+      
+        return (t.cat === ev.user.currentCategory.category && t.strength === i)
           
           // ( t.lastTime === undefined || t.lastTime > Date.now() + 1000 )
         });
         
         i++
         if (i>4) {
-          term = "ERROR FINDING TERM";
           console.log("NO TERM FOUND")
         }
       }
-      
-      
-      // set timestamp on Knowledge object (for SKIP in game)
-      term.lastTime = Date.now();
-      
-      //  store user knoweldge term into ev Class object
-      ev.knowledgeTerm = term;
-      
+      console.log("TERM FOUND IN USER KNOWLEDGE, using ", term)
+
+
+       //  store user knoweldge term into ev Class object
+       ev.knowledgeTerm = term;
+
+
       // look up term in dictionary
       var t = ev.dict.find(function(t) {
-        return t.termId === ev.knowledgeTerm._termId;
+        return t._id === term._id;
       });
+      console.log("TERM FOUND IN DICT, using ", t)
       
+     
+        
       //  Store Q & A into ev Class object
       ev.question = t.term;
       ev.answer = t.def;
+
+
+      // set timestamp on Knowledge object (for SKIP in game)
+      // term.lastTime = Date.now();
+    
       
       //  Increment count number
       ev.questionNum += 1;
       
-      
-      // if GAME skip progress bar
-      // if (ev.state === "game")
-      // ev.displayQuestion();
-      // else
       ev.updateProgress();
     }
     
@@ -462,20 +475,20 @@ $(document).ready(function() {
           // pick a term iD at random from the dictionary, make sure it's not answer
           // also, make sure it's in the current category
           
-          var termsInCategory = ev.user.knowledge.filter(function(t) {
-            return (t.cat === ev.user.currentCategory) 
+          var termsInCategory = ev.dict.filter(function(t) {
+            return (t.cat === ev.user.currentCategory.category) 
           });
           console.log("Terms in cat ", termsInCategory)
-          var randomId = ev.knowledgeTerm.termId
-          while (randomId === ev.knowledgeTerm.termId ) {
+          var randomId = ev.knowledgeTerm._id
+          while (randomId === ev.knowledgeTerm._id ) {
             randomIndex = Math.floor(Math.random() * termsInCategory.length)+1
-            randomId = termsInCategory[randomIndex]._termId
+            randomId = termsInCategory[randomIndex]._id
           }
           
           
           // look this random ID up in the dictionary
           var term = ev.dict.find(function(t) {
-            return t.termId === randomId;
+            return t._id === randomId;
           });
           
           // add decoy answer to answers array
@@ -521,20 +534,20 @@ $(document).ready(function() {
           // pick a term iD at random from the dictionary, make sure it's not answer
           // also, make sure it's in the current category
           
-          var termsInCategory = ev.user.knowledge.filter(function(t) {
-            return (t.cat === ev.user.currentCategory) 
+          var termsInCategory = ev.dict.filter(function(t) {
+            return (t.cat === ev.user.currentCategory.category) 
           });
           console.log("Terms in cat ", termsInCategory)
-          var randomId = ev.knowledgeTerm.termId
-          while (randomId === ev.knowledgeTerm.termId ) {
+          var randomId = ev.knowledgeTerm._id
+          while (randomId === ev.knowledgeTerm._id ) {
             randomIndex = Math.floor(Math.random() * termsInCategory.length)+1
-            randomId = termsInCategory[randomIndex]._termId
+            randomId = termsInCategory[randomIndex]._id
           }
           
           
           // look this random ID up in the dictionary
           var term = ev.dict.find(function(t) {
-            return t.termId === randomId;
+            return t._id === randomId;
           });
           
           // add decoy answer to answers array
@@ -1042,21 +1055,10 @@ $(document).ready(function() {
     
     
     
-    // INJECT CATEGORY CARDS ONTO HOME PAGE
-    var html = '<div class="row justify-content-center">'
-    for (i in categories) {
-      html += '<div class="col-xs-6"><div class="card cat-card" style="width: 9rem;"><img class="card-img-top" src="../img/categories/' + categories[i].imgFileName + '" alt="Card image cap"><div class="card-body"><h6 class="card-title">' + categories[i].category + '</h6><p class="card-text"><strong><span id="#">' + categories[i].catStrength + '</span></strong> %</p></div></div></div>'
-    }
-    html += '</div>'
-    $('#cat-cards').html(html)
-    
     // Start main app
-    // ev.state = "home"
     ev.homeMenu();
     
-    
-    
-    
+  
     
     //// END OF DOC READY!!
   });
