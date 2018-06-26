@@ -151,5 +151,222 @@
 
   { "term":"capital", "def": "Wealth in the form of money or other assets available for investment.", "cat":"Business & Economics"},
 
-  { "term":"credit", "def": "Money, goods or services which are obtained with an agreement to pay for them the future.", "cat":"Business & Economics"}
+  { "term":"credit", "def": "Money, goods or services which are obtained with an agreement to pay for them the future.", "cat":"Business & Economics"},
+
+  { "term":"anthropology", "cat":"Social Sciences", "def":"The study of humans within past and present societies.  In the United States this includes Archeology, the study of physical evidence from past human cultures."},
+
+  { "term":"archaeology", "cat":"Social Sciences", "def":"The study of physical evidence from past human cultures.  Involves the careful excavation of sites and analysis of artifacts."},
+  
+  { "term":"blue-collar", "cat":"Social Sciences", "def":"A type of manual non-agricultural labor, such as construction and manufacturing, which is typically paid hourly.  Can also refer to the people who hold these jobs."},
+
+  { "term":"class", "cat":"Social Sciences", "def":"In societies, a group of people who have similar social or economic status."},
+
+  { "term":"culture", "cat":"Social Sciences", "def":"the ideas, customs, behavior and beliefs of one group that distinguish it from another.  Also, the artistic expressions and other manifestations of those ideas taken together."},
+
+  { "term":"ethnicity", "cat":"Social Sciences", "def":"belonging to a social group that shares a common racial, national or cultural traditions, such as language, customs or beliefs."},
+  
+  { "term":"extended family", "cat":"Social Sciences", "def":"A family that extends beyond the parents and their children to include other relatives such as grandparents, aunts, uncles and cousins."},
+
+  { "term":"psychology", "cat":"Social Sciences", "def":"The science of the human mind and how it affects our behaviors."},
+
+  { "term":"social science", "cat":"Social Sciences", "def":"The study of human groups and their behaviors."},
+
+  { "term":"sociology", "cat":"Social Sciences", "def":"The study of human society."},
+
+  { "term":"stereotype", "cat":"Social Sciences", "def":"A widely held generalization, usually exaggerated or caricatured, that is used to describe a group."},
+
+  { "term":"white-collar", "cat":"Social Sciences", "def":"A term for office workers, including professionals, managers, staff and sales positions."},
+  
+  { "term":"working class", "cat":"Social Sciences", "def":"A social group in a society comprised of blue-collar workers, usually payed in hourly wages for manual or industrial work."},
+
+  { "term":"anxiety", "cat":"Social Sciences", "def":"A feeling of worry or nervousness."},
+
+  { "term":"demography", "cat":"Social Sciences", "def":"The study of statistics such as births, deaths, income, or the incidence of disease, which illustrate the changing structure of human populations."},
+
+  { "term":"feminism", "cat":"Social Sciences", "def":"The advocacy of women's rights on the ground of the equality of the sexes."},
+
+  { "term":"mainstream", "cat":"Social Sciences", "def":"The ideas, attitudes, or activities that are shared by most people and regarded as normal or conventional."},
+
+  { "term":"multiculturalism", "cat":"Social Sciences", "def":"The presence of, or support for several distinct cultural or ethnic groups within a society."},
+
+  { "term":"peer pressure", "cat":"Social Sciences", "def":"Influence from members of one's peer group.  Often used in a negative context."},
+
+  { "term":"personality", "cat":"Social Sciences", "def":"The combination of characteristics or qualities that form an individual's distinctive character."},
+
+  { "term":"prejudice", "cat":"Social Sciences", "def":"Preconceived opinion that is not based on reason or actual experience.  The word is often used to refer to preconceived, usually unfavorable, feelings towards people or a person because of their sex, social class, age, religion, sexuality, race, ethnicity, or other personal characteristics."},
+
+  { "term":"sexism", "cat":"Social Sciences", "def":"Prejudice, stereotyping, or discrimination, typically against women, on the basis of sex."},
+
+  { "stage":1, "term":"Europe", "cat":"Geography", "def":"A continent that comprises the western portion of Eurasia, with a population of 740 million people in about 50 countries. The Arctic Ocean is to the north, the Atlantic Ocean to the west, and the Mediterranean Sea to the south. "},
+
+  { "stage":1, "term":"France", "cat":"Geography", "def":"A country in Western Europe of about 67 million people, famous for its wines, cheeses and cuisine.  Its capital and largest city is Paris."},
+
+  { "stage":1, "term":"equator", "cat":"Geography", "def":"An imaginary line running around the earth that divides it into northern and southern hemispheres at the parallel of latitude 0°."},
+
+  { "stage":1, "term":"Rome", "cat":"Geography", "def":"Capital city of three million in Italy. Ancient ruins from the Roman Empire meet modern fashion and culture in this cosmopolitan city."},
+
+  { "stage":1, "term":"Washington D.C.", "cat":"Geography", "def":"Capital of the United States. Strategic position between the North and South is the reason for its status. Many monuments dedicated to the country's founding fathers are found here."},
+
+  { "stage":1, "term":"Beijing", "cat":"Geography", "def":"China's capital lies in the Northeastern part of the country. Population of 22 million, good for only 27th place in China."},
+
+  { "stage":1, "term":"North America", "cat":"Geography", "def":"Continent containing the United States, Canada, Greenland, Mexico, Central America, and the West Indies."},
+
+  { "stage":1, "term":"South America", "cat":"Geography", "def":"Continent in the Western hemisphere, connected to North America by the Panama Canal. Almost exclusively colonized by Spain in the sixteenth century."},
+
+  { "stage":1, "term":"United States", "cat":"Geography", "def":"Country of 320 million in North America. World hotbed for immigration, finance, politics. One of the most powerful and influential nations."},
+
+  { "stage":1, "term":"Brazil", "cat":"Geography", "def":"Country of over 200 million is Portuguese speaking. Its capital is Brasilia and largest city Sao Paolo. Second largest city Rio De Janeiro is known for its Christ the Redeemer Statue, Copacabana beach, and Carnival."},
+
+  { "stage":1, "term":"New York City", "cat":"Geography", "def":"Eight million people reside in the US's largest city, a global hub for finance, arts, and politics. United Nations headquarters as well as Wall Street are both in Manhattan, one of the city's five boroughs, alongside Brooklyn, Queens, the Bronx, and Staten Island."},
+
+  { "stage":1, "term":"Paris", "cat":"Geography", "def":"France's capital of two million. One of the World's biggest tourist draws and a hub for design, art, and fashion."},
+
+  { "stage":1, "term":"Berlin", "cat":"Geography", "def":"Germany's capital and largest city of nearly four million.  It is located in northeastern Germany on the rivers Spree and Havel.  It is a cosmopolitan world city of politics, media and science and culture."},
+
+  { "stage":1, "term":"Japan", "cat":"Geography", "def":"Island country in the far east. It's capital is the largest city in the world, Tokyo. Has a history of military dynasties but today is known for its high-tech industry and pop culture."},
+
+  { "stage":1, "term":"United Kingdom", "cat":"Geography", "def":"Kingdom encompassing Great Britain and many overseas territories. Its capital is London. Known around the globe for its extensive empire beginning in the seventeenth century."},
+
+  { "stage":1, "term":"Pacific Ocean", "cat":"Geography", "def":"Largest Ocean on Earth, covering one-third of its surface. Borders the Americas to the East and Asia and Oceania on the West."},
+
+  { "stage":1, "term":"Asia", "cat":"Geography", "def":"Most populated and largest continent, taking up thirty percent of the world's land mass and three fifths of its population."},
+
+  { "stage":1, "term":"Tokyo", "cat":"Geography", "def":"Most populous city in the world and capital of Japan. Center for the county's financial, cultural and shopping industries."},
+
+  { "stage":1, "term":"Middle East", "cat":"Geography", "def":"Region in Western Asia. Numerous Ancient civilizations originated here. More recently the site of political instability."},
+
+  { "stage":1, "term":"Atlantic Ocean", "cat":"Geography", "def":"Second largest ocean after Pacific, covering twenty percent of Earth's surface area."},
+
+  { "stage":1, "term":"London", "cat":"Geography", "def":"The Capital of the United Kingdom located in Southeastern England. Global city renowned for its arts and culture as well as its as a  financial hub."},
+
+  { "stage":1, "term":"Hong Kong", "cat":"Geography", "def":"The former British colony is now a special administrative region of China, on the country's Southern Pacific coast. It differs from mainland China in its democratic and capitialist laws."},
+
+  { "stage":1, "term":"Germany", "cat":"Geography", "def":"The largest country in Western Europe with 81 million people, famous worldwide for its scientific and manufacturing prowess."},
+
+  { "stage":1, "term":"Africa", "cat":"Geography", "def":"The second largest and second most populous continent is home to the origins of man."},
+
+  { "stage":1, "term":"Antarctica", "cat":"Geography", "def":"The world's fifth largest continent, and the site of the geographic South Pole."},
+
+  { "stage":1, "term":"China", "cat":"Geography", "def":"With nearly 1.4 billion people, this communist country in eastern Asia is the largest in the world by population and third largest by land. Its capital is Beijing but the largest city is Shanghai, a modern international financial hub."},
+
+  { "stage":1, "term":"Russia", "cat":"Geography", "def":"World's largest country stretching across Europe and Asia. Notable cities include St. Petersburg and its capital Moscow. One of the most influential countries in the world today."},
+
+  { "stage":1, "term":"India", "cat":"Geography", "def":"World's second most populous nation in Southern Asia. Led by Gandhi, the country earned independence from the British Empire in 1947."},
+
+  { "stage":2, "term":"hemisphere", "cat":"Geography", "def":"Any one half of the Earth's surface. Common divisions are North and South, with the equator being the divider, and East and West, with the prime meridian being the divider."},
+
+  { "stage":2, "term":"Caribbean Sea", "cat":"Geography", "def":"Arm of the Atlantic Ocean, bordering by the West Indies to the North and East, Central America and Mexico to the West, and South America to the South. Located in a tropical climate, its clear blue waters and gorgeous beaches make it a popular vacationing spot. The Mesoamerican barrier reef is the world's second longest."},
+
+  { "stage":2, "term":"Athens", "cat":"Geography", "def":"Capital and largest city of Greece. This world city of nearly 4 million is a cosmopolitan metropolis and cultural and economic center."},
+
+  { "stage":2, "term":"Alps", "cat":"Geography", "def":"Europe's most prominent mountain range covers 1,200 kilometers in eight countries: Germany, Austria, Switzerland, France, Liechtenstein, Italy, Slovenia and Monaco."},
+
+  { "stage":2, "term":"Los Angeles", "cat":"Geography", "def":"International, cosmopolitan city in Southern California. Second largest city in the US by population. Important for being the center for the country's television and film industry, hosting headquarters of studio giants such as Paramount and Universal. Hollywood Boulevard is a global tourist destination dedicates a star on the sidewalk to select celebrities."},
+
+  { "stage":2, "term":"Amazon River", "cat":"Geography", "def":"Second longest river in the world, largest in terms of water volume. Its headwaters are in Peru, and after flowing seven thousand kilometers across Brazil and South America, discharges in the Atlantic."},
+
+  { "stage":2, "term":"Central America", "cat":"Geography", "def":"Southernmost part of North America consists of Belize, Costa Rica, Honduras, Nicaragua, Guatemala, El Salvador, and Panama, all former Spanish colonies. The Pacific Ocean is to its West and the Caribbean Sea to its East. Biodiversity hotspot, with jungles, volcanoes, and earthquakes."},
+
+  { "stage":2, "term":"California", "cat":"Geography", "def":"The US's most populous state shares a border with Oregon to the North, Nevada and Arizona to the East, Mexico to the South, and the Pacific Ocean to the West. Sacramento is its capital, but the largest city is Los Angeles. Became populated through the Gold Rush in the mid 1800's. Known for it's entertainment industry in Hollywood, high tech industry in Silicon Valley, and vineyards in the North of the state. Terrain includes some of the world's hottest desert as well as mountains and lush, dense, redwood forests."},
+
+  { "stage":2, "term":"Australia", "cat":"Geography", "def":"The world's sixth largest country only has a population of 25 million people, 98% of which live in coastal areas. The wild desert inland is called the Outback. The capital is Canberra but its largest city is Sydney. Occupies most of the continent Oceania. Its native people are the Aborigines, but British settlement in the late 1700's gives the country an Anglo-Saxon feel. Famous for unique animal species such as the kangaroo."},
+
+  { "stage":2, "term":"Egypt", "cat":"Geography", "def":"This country lies in the northeastern corner of Africa and connects that continent to the Middle East.  Among the world's earliest civilizations, its history stretches back to the time of the Pharaoh's.  Famous landmarks include the iconic Giza's Pyramids and Great Sphinx.  It's capital and largest city is Cairo."},
+
+  { "stage":3, "term":"longitude", "cat":"Geography", "def":"An angle measuring a location's distance East or West of the Prime Meridian."},
+
+  { "stage":3, "term":"latitude", "cat":"Geography", "def":"An angle measuring a location's distance North or South of the Equator."},
+
+  { "stage":3, "term":"Afghanistan", "cat":"Geography", "def":"An Islamic Republic of 33 million in Central Asia. Landlocked and mountainous, its capital is Kabul and the main language is Pashto. Its location along the Silk Road gave it connections to numerous ancient civilizations. Today it suffers from political instability, being invaded by the Soviet Union in 1979, followed by a tumultuous period dominated by rebel and terrorist groups including the Taliban and Al Qaeda."},
+
+  { "stage":3, "term":"Arctic Ocean", "cat":"Geography", "def":"Completely within the Arctic Circle, the smallest of the five oceans has periods where it is covered in ice. Surrounding countries are Canada, Russia, Norway, Greenland, and the United States. Home to whales, walruses and polar bear, very little plant life outside of plankton lives in its freezing waters."},
+
+  { "stage":3, "term":"Iraq", "cat":"Geography", "def":"Country in the Middle East, its capital and largest city is Bagdad. Site of the ancient Mesopotamia civilization. Formerly ruled by dictator Saddam Hussein."},
+
+  { "stage":3, "term":"Arctic", "cat":"Geography", "def":"Earth's Northernmost region. Includes the North Pole, the Arctic Ocean, and parts of Canada, Russia, Alaska (US), Greenland (Denmark), Norway, Sweden, Iceland and Finland. Terrain is mostly a treeless tundra, however unlike Antarctica it contains many species and is home to some humans."},
+
+  { "stage":3, "term":"San Francisco", "cat":"Geography", "def":"Extremely hilly city of nine hundred thousand in Northern California on the Pacific coast. It's population density is second only to New York City. Hub for high-tech innovation and LGBTQ culture. Its position on a fault line makes it the victim of sometimes devastating earthquakes year round. Iconic symbols of the city are the Golden Gate Bridge and cable cars."},
+
+  { "stage":3, "term":"Latin America", "cat":"Geography", "def":"Group of countries in the North, Central, and South America where Spanish and Portuguese are spoken as a primary language."},
+
+  { "stage":3, "term":"Jerusalem", "cat":"Geography", "def":"Irsael's present day capital, an ancient city of 800,000 located on a ridge between the Dead Sea and Jordan River. Place of worship for Christians, Jews, and Muslims."},
+
+  { "stage":3, "term":"Iran", "cat":"Geography", "def":"Islamic, Middle Eastern country bordering Iraq to the West and Afghanistan to the East. Its capital is Tehran. Formerly known as Persia."},
+
+  { "stage":3, "term":"Lebanon", "cat":"Geography", "def":"Middle Eastern country on the Mediterranean shore bordering Israel to the South and Syria to the North. Beirut is both its capital and largest city. Christians and Muslims peacefully coexist."},
+
+  { "stage":3, "term":"Jordan", "cat":"Geography", "def":"Middle Eastern Nation bordering Israel, Syria, Saudi Arabia, and Iraq. Its capital and largest city is Amman. Containes numerous ancient sites from multiple civilizations and empires."},
+
+  { "stage":3, "term":"Manhattan", "cat":"Geography", "def":"Most well known and densely populated of New York City's five boroughs. Global center for finance, arts, and culture, it is the site of numerous landmarks and famed streets including Central Park, the Empire State Building, and Fifth Avenue."},
+
+  { "stage":3, "term":"Himalayas", "cat":"Geography", "def":"Mountain range in Asia spanning across India, China, Tibet, Bhutan, Nepal, and Pakistan. Has Mount Everest, the tallest mountain in the world, as well as ten of the fourteen peaks eclipsing eight thousand meters."},
+
+  { "stage":3, "term":"Silicon Valley", "cat":"Geography", "def":"Nickname for region of the Bay Area, encompassing San Francisco and land south of the city, including San Jose. International high-tech hotspot. The name originates from the former silicon chip manufactures in the area. Today it is home to one-third of all the country's venture capital investment, Stanford University, thousands of budding startups, and technology and internet titans such as Apple and Google."},
+
+  { "stage":3, "term":"Jordan River", "cat":"Geography", "def":"River running through Northern Israel that empties into the Dead Sea. In the Bible it was the site of Jesus's Baptism."},
+
+  { "stage":3, "term":"Canada", "cat":"Geography", "def":"Second largest country in the world by area in North America, population 35 million. Ottawa is its capital but one third of its population lives in the three major cities of Toronto, Vancouver, and Montreal. It is primarily English speaking but in some Eastern parts French is the main language. Giants swaths of forest and tundra dominate the sparsely populated country."},
+
+  { "stage":3, "term":"Madrid", "cat":"Geography", "def":"Spain's capital and largest city, located in the center of the country. With 3.2 million people, it's the third largest city in the EU. It's Modern and global, but the city possesses a historic and authentic feel due to picturesque streets and landmarks including the Royal Palace. It's Prado museum holds some of the world's finest artwork."},
+
+  { "stage":4, "term":"atlas", "cat":"Geography", "def":"A collection of maps, usually bound into book form. Can contain information on geographical, political and economic status regarding regions depicted. Named after the Greek Titan 'Atlas'."},
+
+  { "stage":4, "term":"Algeria", "cat":"Geography", "def":"Africa's largest country by land, bordered by the Mediterranean Sea to the North and consisting of mostly Saharan desert. Algiers is its Largest and capital city, the people speak both French and Arabic. Has been colonized by multiple civilizations including the Romans, Ottomans, and most recently the French."},
+
+  { "stage":4, "term":"Colombia", "cat":"Geography", "def":"Country in the  northwest of South America. Diverse nature encompasses the Andes, the Amazon rainforest, and both Pacific and Caribbean Coastlines. The capital Bogota is at high altitude and famous for restaurants and shopping. Its main legal export is coffee, however drug cartels exported cocaine and marijuana grown in the country, and the corruption that goes along with that, has been a huge problem for the government."},
+
+  { "stage":4, "term":"Aegean Sea", "cat":"Geography", "def":"Eastern arm of Mediterranean separating the Greek and Anatolian peninsulas. Lying in between Greek and Turkish mainlands, it is host to the popular vacationing spot Aegean islands. Also served as a trade route for ancient civilizations such as Rome, Greece, and Persia."},
+
+  { "stage":4, "term":"Costa Rica", "cat":"Geography", "def":"Former Spanish colony in Central America, bordered by Panama to the South, Nicaragua to the North, the Caribbean to the East and Pacific to the West. Rainforest and volcanoes fill its breathtaking landscape. The capital and largest city is San Jose, of 4.5 million people. Known for being one of the most developed nations in the region, with a liberal and peace loving culture. The country has no military."},
+
+  { "stage":4, "term":"Austria", "cat":"Geography", "def":"Landlocked, German-speaking mountainous country in central Europe. Capital and largest city is Vienna. Alpine villages, skiing and hiking make it a tourist destination. Neutral since 1955, before that the country had experienced a century of violence, having its alliance with Hungary destroyed following World War One and then being annexed by the Nazis in World War Two."},
+
+  { "stage":4, "term":"Arabian Sea", "cat":"Geography", "def":"Part of the Indian Ocean. Borders India to the East, and the Arabian peninsula to the West. Since the second millennium BCE, it has been host to major trade routes. The sea includes the Gulf of Aden which feeds into the Red Sea and the Gulf of Oman, leading to the Persian Gulf."},
+
+  { "stage":4, "term":"Antarctic", "cat":"Geography", "def":"Region encompassing Antarctica and the surrounding Southern Ocean. Includes all the islands, ice shelves, and water on the Antarctic plate, and below the Antarctic Circle."},
+
+  { "stage":4, "term":"Baltic Sea", "cat":"Geography", "def":"Sea in Northeastern Europe. Surrounding countries are Denmark, Sweden, Finland, Germany, Poland, Russia, and the Baltic states. Feeds into the North Sea which then leads to the Atlantic through Danish islands as well as the Kiel canal. During winter up to fifty percent of the sea can be covered in ice."},
+
+  { "stage":4, "term":"Texas", "cat":"Geography", "def":"Second largest state by area and population. Located in South Central United States. Austin is its capital, Houston is its largest city, but Dallas is perhaps its most recognizable. It shares a border with Mexico along the Rio Grande river. Rugged terrain includes mountains, deserts and prairie. Associated with the image of the Cowboy, the cattle industry has now given way to oil as the state's primary industry."},
+
+
+  { "stage":4, "term":"Black Sea", "cat":"Geography", "def":"Separating Europe and Asia, the sea is closed in by Ukraine, Russia, Georgia, Turkey, Bulgaria, and Romania. Receiver of multiple rivers such as the Danube and Dnieper. Important coastline cities include Istanbul and Odessa. It is a popular beach resort for Eastern Europeans."},
+
+  { "stage":4, "term":"Chile", "cat":"Geography", "def":"South American country that is long and narrow, with over six thousand kilometers of Pacific coastline to the West but only 350 kilometers at its widest points. Former Spanish colony. Bordered by Peru, Bolivia and Argentina. Unique in its location on the western slope of the Andes mountains, one of the world's only places where mountains are found immediately after coastline. Capital and largest city is Santiago at 4.3 million people."},
+
+  { "stage":4, "term":"Mecca", "cat":"Geography", "def":"The holiest city in the religion of Islam lies in western Saudi Arabia. The Prophet Mohammed was born here. Millions of Muslim pilgrims make the annual trek to the sacred Mosque, where the Kaaba, Islam's holiest object where prayers are directed to, lies."},
+
+  { "stage":4, "term":"Hawaii", "cat":"Geography", "def":"The last of the fifty States is a group of eight main islands along with located in the Pacific Ocean, a five hour flight away from San Diego. Its capital is Honolulu. Waterfalls, volcanoes, cliffs, and stunning beaches fill the landscape. The state isn't in North America, but Oceania."},
+
+  { "stage":4, "term":"Antarctic Circle", "cat":"Geography", "def":"The most Southern of Earth's five main latitude lines dividing the planet. Above this region is the Southern Temperate Zone. Experiences 24 hours of sunlight in summer and complete days without sunlight in winter."},
+
+  { "stage":4, "term":"Andes", "cat":"Geography", "def":"The world's longest continental mountain range stretches over seven thousand kilometers along South America's Pacific coastline, passing through Venezuela, Colombia, Ecuador, Perú, Bolivia, Argentina, and Chile. Various biomes are including in the mountain range, such as glaciers, deserts, volcanoes, grasslands, forest, and lakes. Its highest peak is Mount Aconcagua in Argentina, measuring nearly seven thousand meters tall."},
+
+  { "stage":4, "term":"Hollywood", "cat":"Geography", "def":"This district of Los Angeles hosts the world's second largest and most recognizable film industry. Eighty thousand ethnically diverse residents make up this neighborhood that has become shorthand for referring to the industry that it represents. Landmarks include the Walk of Fame, the Hollywood sign, and many historic cinematic venues."},
+
+  { "stage":4, "term":"Arabia", "cat":"Geography", "def":"World's largest peninsula in Southwest Asia, consisting of Saudi Arabia, bahrain, Kuwait, Oman, Qatar, the UAE, and Yemen. Its position in between Europe, Africa and Asia gives it huge geopolitical importance. Many ancient empires and civilizations originated here."},
+
+  { "stage":5, "term":"Algiers", "cat":"Geography", "def":"Algeria's capital of 3.5 million people on the Mediterranean Sea. Nicknamed 'Algiers the White' for the distinct, glowing hue of its buildings as seen from sea. Its modern section is situated by the water while the Old City sprawls up the hill that towers above the coast."},
+
+  { "stage":5, "term":"axis", "cat":"Geography", "def":"Imaginary straight line that the Earth rotates around. Starts at the North Pole and ends at the South Pole."},
+
+  { "stage":6, "term":"Alexandria", "cat":"Geography", "def":"Founded by Alexander the Great in 331 BC, Egypt's second largest city lies where the Nile flows into the Mediterranean. Has a lighthouse that is one of the Seven Wonders of the Ancient World and a now-renovated, storied library. A former cultural hub to both Christians and Jews, and a current economic and industrial center to North Africa and the Middle East."},
+
+  { "stage":6, "term":"Albania", "cat":"Geography", "def":"Located in the Southeastern Balkans and bordering the Adriatic Sea, the former Eastern Bloc nation-state possesses a unique culture and language . Its capital and largest city is Tirana."},
+
+  { "stage":6, "term":"Adriatic Sea", "cat":"Geography", "def":"Mediterranean Sea's northernmost arm. Borders Italy to the West and Croatia, Bosnia and Herzegovina, Albania, Montenegro, and Yugoslavia to the East. Home to over 1,300 mostly Croatian Islands and many famous coastline cities including Venice and Split."},
+
+  { "stage":7, "term":"Addis Ababa", "cat":"Geography", "def":"Ethiopia's largest and capital city, sitting in the highlands next to the Great Rift Valley in the country's central region. The city of around four million is home to the African Union and is a major continental hub, often referred to as the political capital of Africa."},
+
+  { "stage":7, "term":"Saigon", "cat":"Geography", "def":"See Ho Chi Minh City"},
+
+  { "stage":8, "term":"Alberta", "cat":"Geography", "def":"Canadian province of four million people, it is bordered by British Columbia to the West, Saskatchewan to the East, Northwest Territories to the North, and Montana to the South. Its capital is Edmonton. Landscape contains prairies, the Rocky Mountains, oil, and minerals."},
+
+  { "stage":8, "term":"Acapulco", "cat":"Geography", "def":"City and major seaport on Mexico’s Pacific coast.  In the 1950’s it was a fashionable beach resort attracting famous Hollywood stars. Today it is still a popular port and beach destination among Mexican and international tourists. "},
+
+  { "stage":9, "term":"Aden", "cat":"Geography", "def":"Port city of 800,000 in southwestern Yemen. Used as a harbour since ancient times, it is at the Southern entrance of the Red Sea."},
+
+  { "stage":9, "term":"Aberdeen", "cat":"Geography", "def":"Scotland’s third most populous city, with an international population, on the North Sea, nicknamed the Granite City for its many grey stone buildings."}
+
 ]
+

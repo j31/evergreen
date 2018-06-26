@@ -5,6 +5,7 @@ const termSchema = new Schema({
   term: {type: String, required: true, unique: true}, 
   def: {type: String},
   cat: {type: String, required: true},
+  stage: Number,
 }, {
   timestamps: {
     createdAt: 'created_at',
