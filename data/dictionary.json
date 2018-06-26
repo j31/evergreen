@@ -143,7 +143,7 @@
 
   { "term":"trade", "def": "Generally, the buying and selling of goods and services, or similar economic activity.", "cat":"Business & Economics"},
 
-  { "term":"U.S. dollar", "def": "The official currency of the United States.", "termId":73, "cat":"Business & Economics"},
+  { "term":"U.S. dollar", "def": "The official currency of the United States.", "cat":"Business & Economics"},
 
   { "term":"barter", "def": "The direct exchange of goods and services for other goods and services, rather than for money.", "cat":"Business & Economics"},
 

@@ -10,11 +10,12 @@
     { _id: 7, group: "World", category: "Modern History", imgFileName: "cat_mod_history.jpg"  },
     { _id: 8, group: "World", category: "Cont. History",   imgFileName: "cat_cont_history.jpg" },
     { _id: 9, group: "World", category: "Pre-modern History",  imgFileName: "cat_pre_mod_history.jpg" },
+    { _id: 10, group: "World", category: "Business & Economics", imgFileName: "cat_business.jpg"     },
 
-    { _id: 10, group: "Sciences", category: "Technology",  imgFileName: "cat_technology.jpg"   },
-    { _id: 11, group: "Sciences", category: "Life Sciences",  imgFileName: "cat_life_science.jpg"    },
-    { _id: 12, group: "Sciences", category: "Medicine and Health", imgFileName: "cat_medicine.png"        },
-    { _id: 13, group: "Sciences", category: "Business & Economics", imgFileName: "cat_business.jpg"     },
+    { _id: 11, group: "Sciences", category: "Technology",  imgFileName: "cat_technology.jpg"   },
+    { _id: 12, group: "Sciences", category: "Life Sciences",  imgFileName: "cat_life_science.jpg"    },
+    { _id: 13, group: "Sciences", category: "Medicine and Health", imgFileName: "cat_medicine.png"        },
+  
     { _id: 14, group: "Sciences", category: "Physical Sciences", imgFileName: "cat_phys_science.jpg"    },
     { _id: 15, group: "Sciences", category: "Social Sciences", imgFileName: "cat_social_science.jpg"  },
     { _id: 16, group: "Sciences", category: "Earth Sciences", imgFileName: "cat_earth_science.jpg"   },
