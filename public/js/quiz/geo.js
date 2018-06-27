@@ -227,8 +227,9 @@ $(document).ready(function() {
       });
 
       //  bind correction logic to CONTINUTE
+      $('#continue-btn').unbind('click');
       $('#continue-btn').click(function(){
-        $('#check-answer-btn').unbind('click');
+        
         onContinue();
       });
 
