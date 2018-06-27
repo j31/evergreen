@@ -39,6 +39,9 @@ $(document).ready(function() {
 
 
     startSection() {
+
+      $('footer').addClass('d-none');
+
       // Show start section
       $('#start-btn').unbind('click');
       $('#start-btn').click(function(){
@@ -53,7 +56,6 @@ $(document).ready(function() {
     initializeQuiz() {
       // Hide nav and footer
       $('#navigation').addClass('d-none');
-      $('footer').addClass('d-none');
 
       // Get the list of questions
       geo.getQuestionOrder();
@@ -150,18 +152,18 @@ $(document).ready(function() {
       $('#check-answer-btn').removeClass('d-none');
 
       // listen on "enter" key
+      $(document).unbind('keypress');
       $(document).keypress(function(e) {
         if(e.which == 13 && !$("#game-check-btn").hasClass("disabled")) {
           var userAnswer = $('#answer').val();
-          $(document).unbind('keypress');
           geo.checkUserAnswer(userAnswer);
         }
       });
 
       //  bind correction logic to check button
+      $('#check-answer-btn').unbind('click');
       $('#check-answer-btn').click(function(){
         var userAnswer = $('#answer').val();
-        $('#check-answer-btn').unbind('click');
         geo.checkUserAnswer(userAnswer);
       });
     };
