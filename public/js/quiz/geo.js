@@ -219,9 +219,9 @@ $(document).ready(function() {
 
 
       // listen on "enter" key for CONTINUE BUTTON
+      $(document).unbind('keypress');
       $(document).keypress(function(e) {
         if(e.which == 13 ) {
-          $(document).unbind('keypress');
           onContinue();
         }
       });
