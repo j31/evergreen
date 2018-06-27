@@ -16,7 +16,8 @@ $(document).ready(function() {
   console.log("countries ", countries );
   console.log("knowledge ", knowledge );
 
-  
+
+
   // User class
   class User {
     constructor (name, knowledge) {
@@ -24,9 +25,6 @@ $(document).ready(function() {
     this.knowledge = knowledge;
     };
   };
- 
-  // Instantiate user
-  var user = new User (username, knowledge );
  
   // Main application Class
   class GeoQuiz {
@@ -37,23 +35,41 @@ $(document).ready(function() {
     this.questionNumber = 0;
     this.numberCorrect = 0;
     this.questions = [];
-    this.answers = [];
     };
 
-    initializeQuiz() {
 
-      // Set features and listen on CLOSE button
+    startSection() {
+      // Show start section
+      $('#start-btn').unbind('click');
+      $('#start-btn').click(function(){
+        $('#continue-btn').addClass('d-none');
+        $('#start').addClass('d-none');
+        $('#quiz').removeClass('d-none');
+ 
+        geo.initializeQuiz();
+      });
+    }
+
+    initializeQuiz() {
+      // Hide nav and footer
+      $('#navigation').addClass('d-none');
+      $('footer').addClass('d-none');
+
+      // Get the list of questions
+      geo.getQuestionOrder();
+
+      // Listen on "Finished Game" button
       $('#close-btn').unbind('click');
       $('#close-btn').click(function(){
         $('#navigation').removeClass('d-none');
-        $('.correct').addClass('d-none');
-        $('.wrong').addClass('d-none');
+        $('footer').removeClass('d-none');
+        $('#quiz').addClass('d-none');
+        $('#close-btn').addClass('d-none');
         geo.showResults();
       });
-        
-    $('#navigation').addClass('d-none');
-    geo.getQuestionOrder();
-    }
+    };
+
+    
 
     getQuestionOrder() {
       // create array of Terms in order
@@ -78,8 +94,7 @@ $(document).ready(function() {
       // sort the temp array and store in questions array
       geo.questions = temp.sort(function(obj1, obj2) {
         return obj1.weight - obj2.weight;
-        });
-      
+      });
       
       console.log("questions ", geo.questions);
 
@@ -110,14 +125,16 @@ $(document).ready(function() {
       // display gif of country
 
       // make country name lowercase and add .gif
-      var imgURL = (this.knowledgeTerm.term).toLowerCase() + ".gif"
+      var imgFileName = (this.knowledgeTerm.term).toLowerCase() + ".gif"
 
       // replace spaces in filename with underscore
-      imgURL = imgURL.replace(/\s/g, '_')
+      imgFileName =  imgFileName.replace(/\s/g, '_')
       
 
       // temporarily use this image
-      imgURL = '<img src="/img/quiz/geo/countries/albania.gif" alt="albania.gif">'
+      var imgURL = '<img width="200" src="/img/quiz/geo/countries/' + imgFileName + '">'
+
+      console.log(imgURL)
       
       // display image on page
       $('#country-image').html(imgURL)
@@ -127,6 +144,8 @@ $(document).ready(function() {
 
     getUserAnswer() {
       // display answer box, get user answer
+
+      $('#answer').focus()
 
       $('#check-answer-btn').removeClass('d-none');
 
@@ -153,8 +172,6 @@ $(document).ready(function() {
       // hide check-answer button
       $('#check-answer-btn').addClass('d-none');
 
-      // add this term to uswer answer array
-      this.answers.push(userAnswer);
 
       // if correct
       if ( userAnswer.toLowerCase() === geo.knowledgeTerm.term.toLowerCase() ) {
@@ -162,6 +179,32 @@ $(document).ready(function() {
         $('.correct').removeClass('d-none');
         this.numberCorrect += 1;
         $('#continue-btn').removeClass('d-none');
+
+        var id = geo.knowledgeTerm._id
+
+        console.log("DEBUG id, ", id)
+        console.log("DEBUG geo.knowledgeTerm, ", geo.knowledgeTerm)
+    
+        var i = knowledge.findIndex(x => x._id === id);
+        
+        console.log("DEBUG i, ", i)
+
+        if ( knowledge[i].strength <= 5 ) {
+          knowledge[i].strength += 1; 
+        }
+
+        console.log("New strength is ", knowledge[i].strength )
+
+
+
+        // update user knowledge in Database
+        axios.patch(`http://localhost:3000/knowledge/${username}`, knowledge)
+        .then(response => {
+          console.log("User knowledge updated")
+        })
+        .catch(error => {
+          console.log(error)
+        })
       }
 
       // if wrong
@@ -199,8 +242,17 @@ $(document).ready(function() {
 
     showResults() {
       // when game is ended, show user list of countries in strength order
-
+      $('#results').removeClass('d-none');
       console.log("number correct ", this.numberCorrect)
+      
+      // var percentageCorrect = (geo.numberCorrect / geo.questionNumber * 100).toFixed(0);
+
+      var html = `<h3>You got ${geo.numberCorrect} out of ${geo.questionNumber} correct.</h3><br><br>`
+     
+      html += `<h1>Well done!</h1>`
+
+      $('#results-list').html(html);
+
     };
 
     showLeaderboard() {
@@ -213,12 +265,15 @@ $(document).ready(function() {
 
   };
  
+
+  // Instantiate user
+  var user = new User (username, knowledge );
+
   // Instantiate Geo Quiz session object
   var geo = new GeoQuiz (user, countries );
   console.log("geo ", geo)
-
-
-  geo.initializeQuiz()
+  
+  geo.startSection()
 
 
 // end of DOM ready

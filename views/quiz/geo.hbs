@@ -8,51 +8,65 @@
   <!-- FontAwesome CSS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-
-    <style>
-       /* Set the size of the div element that contains the map */
-      #map {
-        height: 250px;  /* The height is 400 pixels */
-        width: 250px;  /* The width is the width of the web page */
-       }
-    </style>
-
-
-
 </head>
 <body>
 
-<div class="text-center">
-  <div class="col-md-9 text-right">
-  <br>
-  <a id="close-btn" class="btn btn-outline-secondary btn-sm" href="#">Close</a>
-  </div>
-  <br>
-  <h2>What country is this?</h2>
-  <br>
 
-  <div id="country-image"></div>
+<div id="start">
+  <div class="text-center">
+    <br>
 
-  <br><br>
-  <div>
-      <input class="form-control answer-field" id="answer" type="text" name="answer" placeholder="Type the country name here..."><br>
-      <a id="check-answer-btn" class="btn btn-outline-success btn-sm" href="#">Check Answer</a>
-      <div class="correct d-none text-center">
-      <i class="fas fa-check-circle fa-4x"></i>
-      </div>
-      <div class="wrong d-none text-center">
-      <i class="fas fa-times-circle fa-4x"></i> Correct answer: <span id="correct-answer"></span>
-      </div>
-
-      </div> 
+    <div class="text-center">
+      <br>
+      <h2>Ready to Play?</h2>
+      <br>
+      <br><br>
       <div class="col-md-6 mx-auto">
-      <a id="continue-btn" class="btn btn-outline-success btn-xl game-btn d-none"  href="#">Continue</a><br>
+      <a id="start-btn" class="btn btn-outline-success btn-xl"  href="#">Start the Quiz!</a>
+      <br><br><br>
       </div>
+    </div>
   </div>
 </div>
 
 
-<div id="country"></div>
+<div id="quiz" class="text-center d-none">
+  <br><br>
+  <div class="col-md-9 text-right">
+    <a id="close-btn" class="btn btn-outline-secondary btn-sm" href="#">Close Quiz</a>
+  </div>
+  <div id="country-image"></div>
+  <br><br>
+  <div>
+    <div class="correct d-none text-center">
+    <i class="fas fa-check-circle fa-3x"></i>
+    </div>
+    <div class="wrong d-none text-center">
+    <i class="fas fa-times-circle fa-3x"></i>
+    Correct answer: <strong><span class="align-middle" id="correct-answer"></span></strong>
+    </div>
+    <br>
+    <input class="form-control answer-field" id="answer" type="text" name="answer" placeholder="Type the country and press enter..."><br>
+    <a id="check-answer-btn" class="btn btn-outline-success btn-xl" href="#">Check Answer</a>
+    </div> 
+    <div class="col-md-6 mx-auto">
+    <a id="continue-btn" class="btn btn-outline-success btn-xl d-none"  href="#">Continue</a><br>
+    </div>
+    <p>( <span id="country"></span> )</p>
+  </div>
+</div>
+  
+<div id="results" class="text-center d-none">
+  <br>
+  <br>
+  <div id="results-list"></div>
+  <br>  
+  <br>
+  <div class="col-md-6 mx-auto">
+    <a id="play-again-btn" class="btn btn-outline-success btn-xl"  href="/quiz/geo">Continue</a>
+  </div>
+  <br><br><br>
+</div>
 
 
 
