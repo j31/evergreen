@@ -199,7 +199,7 @@
 
   { "stage":1, "term":"Europe", "cat":"Geography", "def":"A continent that comprises the western portion of Eurasia, with a population of 740 million people in about 50 countries. The Arctic Ocean is to the north, the Atlantic Ocean to the west, and the Mediterranean Sea to the south. "},
 
-  { "stage":1, "term":"France", "cat":"Geography", "def":"A country in Western Europe of about 67 million people, famous for its wines, cheeses and cuisine.  Its capital and largest city is Paris."},
+  { "stage":1, "type":"country",  "term":"France", "cat":"Geography", "def":"A country in Western Europe of about 67 million people, famous for its wines, cheeses and cuisine.  Its capital and largest city is Paris."},
 
   { "stage":1, "term":"equator", "cat":"Geography", "def":"An imaginary line running around the earth that divides it into northern and southern hemispheres at the parallel of latitude 0°."},
 
@@ -213,9 +213,9 @@
 
   { "stage":1, "term":"South America", "cat":"Geography", "def":"Continent in the Western hemisphere, connected to North America by the Panama Canal. Almost exclusively colonized by Spain in the sixteenth century."},
 
-  { "stage":1, "term":"United States", "cat":"Geography", "def":"Country of 320 million in North America. World hotbed for immigration, finance, politics. One of the most powerful and influential nations."},
+  { "stage":1, "type":"country", "term":"United States", "cat":"Geography", "def":"Country of 320 million in North America. World hotbed for immigration, finance, politics. One of the most powerful and influential nations."},
 
-  { "stage":1, "term":"Brazil", "cat":"Geography", "def":"Country of over 200 million is Portuguese speaking. Its capital is Brasilia and largest city Sao Paolo. Second largest city Rio De Janeiro is known for its Christ the Redeemer Statue, Copacabana beach, and Carnival."},
+  { "stage":1, "type":"country", "term":"Brazil", "cat":"Geography", "def":"Country of over 200 million is Portuguese speaking. Its capital is Brasilia and largest city Sao Paolo. Second largest city Rio De Janeiro is known for its Christ the Redeemer Statue, Copacabana beach, and Carnival."},
 
   { "stage":1, "term":"New York City", "cat":"Geography", "def":"Eight million people reside in the US's largest city, a global hub for finance, arts, and politics. United Nations headquarters as well as Wall Street are both in Manhattan, one of the city's five boroughs, alongside Brooklyn, Queens, the Bronx, and Staten Island."},
 
@@ -223,9 +223,9 @@
 
   { "stage":1, "term":"Berlin", "cat":"Geography", "def":"Germany's capital and largest city of nearly four million.  It is located in northeastern Germany on the rivers Spree and Havel.  It is a cosmopolitan world city of politics, media and science and culture."},
 
-  { "stage":1, "term":"Japan", "cat":"Geography", "def":"Island country in the far east. It's capital is the largest city in the world, Tokyo. Has a history of military dynasties but today is known for its high-tech industry and pop culture."},
+  { "stage":1, "type":"country", "term":"Japan", "cat":"Geography", "def":"Island country in the far east. It's capital is the largest city in the world, Tokyo. Has a history of military dynasties but today is known for its high-tech industry and pop culture."},
 
-  { "stage":1, "term":"United Kingdom", "cat":"Geography", "def":"Kingdom encompassing Great Britain and many overseas territories. Its capital is London. Known around the globe for its extensive empire beginning in the seventeenth century."},
+  { "stage":1, "type":"country", "term":"United Kingdom", "cat":"Geography", "def":"Kingdom encompassing Great Britain and many overseas territories. Its capital is London. Known around the globe for its extensive empire beginning in the seventeenth century."},
 
   { "stage":1, "term":"Pacific Ocean", "cat":"Geography", "def":"Largest Ocean on Earth, covering one-third of its surface. Borders the Americas to the East and Asia and Oceania on the West."},
 
@@ -241,17 +241,17 @@
 
   { "stage":1, "term":"Hong Kong", "cat":"Geography", "def":"The former British colony is now a special administrative region of China, on the country's Southern Pacific coast. It differs from mainland China in its democratic and capitialist laws."},
 
-  { "stage":1, "term":"Germany", "cat":"Geography", "def":"The largest country in Western Europe with 81 million people, famous worldwide for its scientific and manufacturing prowess."},
+  { "stage":1, "type":"country", "term":"Germany", "cat":"Geography", "def":"The largest country in Western Europe with 81 million people, famous worldwide for its scientific and manufacturing prowess."},
 
   { "stage":1, "term":"Africa", "cat":"Geography", "def":"The second largest and second most populous continent is home to the origins of man."},
 
   { "stage":1, "term":"Antarctica", "cat":"Geography", "def":"The world's fifth largest continent, and the site of the geographic South Pole."},
 
-  { "stage":1, "term":"China", "cat":"Geography", "def":"With nearly 1.4 billion people, this communist country in eastern Asia is the largest in the world by population and third largest by land. Its capital is Beijing but the largest city is Shanghai, a modern international financial hub."},
+  { "stage":1, "type":"country", "term":"China", "cat":"Geography", "def":"With nearly 1.4 billion people, this communist country in eastern Asia is the largest in the world by population and third largest by land. Its capital is Beijing but the largest city is Shanghai, a modern international financial hub."},
 
-  { "stage":1, "term":"Russia", "cat":"Geography", "def":"World's largest country stretching across Europe and Asia. Notable cities include St. Petersburg and its capital Moscow. One of the most influential countries in the world today."},
+  { "stage":1, "type":"country", "term":"Russia", "cat":"Geography", "def":"World's largest country stretching across Europe and Asia. Notable cities include St. Petersburg and its capital Moscow. One of the most influential countries in the world today."},
 
-  { "stage":1, "term":"India", "cat":"Geography", "def":"World's second most populous nation in Southern Asia. Led by Gandhi, the country earned independence from the British Empire in 1947."},
+  { "stage":1, "type":"country", "term":"India", "cat":"Geography", "def":"World's second most populous nation in Southern Asia. Led by Gandhi, the country earned independence from the British Empire in 1947."},
 
   { "stage":2, "term":"hemisphere", "cat":"Geography", "def":"Any one half of the Earth's surface. Common divisions are North and South, with the equator being the divider, and East and West, with the prime meridian being the divider."},
 
@@ -269,19 +269,19 @@
 
   { "stage":2, "term":"California", "cat":"Geography", "def":"The US's most populous state shares a border with Oregon to the North, Nevada and Arizona to the East, Mexico to the South, and the Pacific Ocean to the West. Sacramento is its capital, but the largest city is Los Angeles. Became populated through the Gold Rush in the mid 1800's. Known for it's entertainment industry in Hollywood, high tech industry in Silicon Valley, and vineyards in the North of the state. Terrain includes some of the world's hottest desert as well as mountains and lush, dense, redwood forests."},
 
-  { "stage":2, "term":"Australia", "cat":"Geography", "def":"The world's sixth largest country only has a population of 25 million people, 98% of which live in coastal areas. The wild desert inland is called the Outback. The capital is Canberra but its largest city is Sydney. Occupies most of the continent Oceania. Its native people are the Aborigines, but British settlement in the late 1700's gives the country an Anglo-Saxon feel. Famous for unique animal species such as the kangaroo."},
+  { "stage":2, "type":"country", "term":"Australia", "cat":"Geography", "def":"The world's sixth largest country only has a population of 25 million people, 98% of which live in coastal areas. The wild desert inland is called the Outback. The capital is Canberra but its largest city is Sydney. Occupies most of the continent Oceania. Its native people are the Aborigines, but British settlement in the late 1700's gives the country an Anglo-Saxon feel. Famous for unique animal species such as the kangaroo."},
 
-  { "stage":2, "term":"Egypt", "cat":"Geography", "def":"This country lies in the northeastern corner of Africa and connects that continent to the Middle East.  Among the world's earliest civilizations, its history stretches back to the time of the Pharaoh's.  Famous landmarks include the iconic Giza's Pyramids and Great Sphinx.  It's capital and largest city is Cairo."},
+  { "stage":2, "type":"country", "term":"Egypt", "cat":"Geography", "def":"This country lies in the northeastern corner of Africa and connects that continent to the Middle East.  Among the world's earliest civilizations, its history stretches back to the time of the Pharaoh's.  Famous landmarks include the iconic Giza's Pyramids and Great Sphinx.  It's capital and largest city is Cairo."},
 
   { "stage":3, "term":"longitude", "cat":"Geography", "def":"An angle measuring a location's distance East or West of the Prime Meridian."},
 
   { "stage":3, "term":"latitude", "cat":"Geography", "def":"An angle measuring a location's distance North or South of the Equator."},
 
-  { "stage":3, "term":"Afghanistan", "cat":"Geography", "def":"An Islamic Republic of 33 million in Central Asia. Landlocked and mountainous, its capital is Kabul and the main language is Pashto. Its location along the Silk Road gave it connections to numerous ancient civilizations. Today it suffers from political instability, being invaded by the Soviet Union in 1979, followed by a tumultuous period dominated by rebel and terrorist groups including the Taliban and Al Qaeda."},
+  { "stage":3, "type":"country", "term":"Afghanistan", "cat":"Geography", "def":"An Islamic Republic of 33 million in Central Asia. Landlocked and mountainous, its capital is Kabul and the main language is Pashto. Its location along the Silk Road gave it connections to numerous ancient civilizations. Today it suffers from political instability, being invaded by the Soviet Union in 1979, followed by a tumultuous period dominated by rebel and terrorist groups including the Taliban and Al Qaeda."},
 
   { "stage":3, "term":"Arctic Ocean", "cat":"Geography", "def":"Completely within the Arctic Circle, the smallest of the five oceans has periods where it is covered in ice. Surrounding countries are Canada, Russia, Norway, Greenland, and the United States. Home to whales, walruses and polar bear, very little plant life outside of plankton lives in its freezing waters."},
 
-  { "stage":3, "term":"Iraq", "cat":"Geography", "def":"Country in the Middle East, its capital and largest city is Bagdad. Site of the ancient Mesopotamia civilization. Formerly ruled by dictator Saddam Hussein."},
+  { "stage":3, "type":"country", "term":"Iraq", "cat":"Geography", "def":"Country in the Middle East, its capital and largest city is Bagdad. Site of the ancient Mesopotamia civilization. Formerly ruled by dictator Saddam Hussein."},
 
   { "stage":3, "term":"Arctic", "cat":"Geography", "def":"Earth's Northernmost region. Includes the North Pole, the Arctic Ocean, and parts of Canada, Russia, Alaska (US), Greenland (Denmark), Norway, Sweden, Iceland and Finland. Terrain is mostly a treeless tundra, however unlike Antarctica it contains many species and is home to some humans."},
 
@@ -291,11 +291,11 @@
 
   { "stage":3, "term":"Jerusalem", "cat":"Geography", "def":"Irsael's present day capital, an ancient city of 800,000 located on a ridge between the Dead Sea and Jordan River. Place of worship for Christians, Jews, and Muslims."},
 
-  { "stage":3, "term":"Iran", "cat":"Geography", "def":"Islamic, Middle Eastern country bordering Iraq to the West and Afghanistan to the East. Its capital is Tehran. Formerly known as Persia."},
+  { "stage":3, "type":"country", "term":"Iran", "cat":"Geography", "def":"Islamic, Middle Eastern country bordering Iraq to the West and Afghanistan to the East. Its capital is Tehran. Formerly known as Persia."},
 
-  { "stage":3, "term":"Lebanon", "cat":"Geography", "def":"Middle Eastern country on the Mediterranean shore bordering Israel to the South and Syria to the North. Beirut is both its capital and largest city. Christians and Muslims peacefully coexist."},
+  { "stage":3, "type":"country", "term":"Lebanon", "cat":"Geography", "def":"Middle Eastern country on the Mediterranean shore bordering Israel to the South and Syria to the North. Beirut is both its capital and largest city. Christians and Muslims peacefully coexist."},
 
-  { "stage":3, "term":"Jordan", "cat":"Geography", "def":"Middle Eastern Nation bordering Israel, Syria, Saudi Arabia, and Iraq. Its capital and largest city is Amman. Containes numerous ancient sites from multiple civilizations and empires."},
+  { "stage":3, "type":"country", "term":"Jordan", "cat":"Geography", "def":"Middle Eastern Nation bordering Israel, Syria, Saudi Arabia, and Iraq. Its capital and largest city is Amman. Containes numerous ancient sites from multiple civilizations and empires."},
 
   { "stage":3, "term":"Manhattan", "cat":"Geography", "def":"Most well known and densely populated of New York City's five boroughs. Global center for finance, arts, and culture, it is the site of numerous landmarks and famed streets including Central Park, the Empire State Building, and Fifth Avenue."},
 
@@ -305,21 +305,21 @@
 
   { "stage":3, "term":"Jordan River", "cat":"Geography", "def":"River running through Northern Israel that empties into the Dead Sea. In the Bible it was the site of Jesus's Baptism."},
 
-  { "stage":3, "term":"Canada", "cat":"Geography", "def":"Second largest country in the world by area in North America, population 35 million. Ottawa is its capital but one third of its population lives in the three major cities of Toronto, Vancouver, and Montreal. It is primarily English speaking but in some Eastern parts French is the main language. Giants swaths of forest and tundra dominate the sparsely populated country."},
+  { "stage":3, "type":"country", "term":"Canada", "cat":"Geography", "def":"Second largest country in the world by area in North America, population 35 million. Ottawa is its capital but one third of its population lives in the three major cities of Toronto, Vancouver, and Montreal. It is primarily English speaking but in some Eastern parts French is the main language. Giants swaths of forest and tundra dominate the sparsely populated country."},
 
   { "stage":3, "term":"Madrid", "cat":"Geography", "def":"Spain's capital and largest city, located in the center of the country. With 3.2 million people, it's the third largest city in the EU. It's Modern and global, but the city possesses a historic and authentic feel due to picturesque streets and landmarks including the Royal Palace. It's Prado museum holds some of the world's finest artwork."},
 
   { "stage":4, "term":"atlas", "cat":"Geography", "def":"A collection of maps, usually bound into book form. Can contain information on geographical, political and economic status regarding regions depicted. Named after the Greek Titan 'Atlas'."},
 
-  { "stage":4, "term":"Algeria", "cat":"Geography", "def":"Africa's largest country by land, bordered by the Mediterranean Sea to the North and consisting of mostly Saharan desert. Algiers is its Largest and capital city, the people speak both French and Arabic. Has been colonized by multiple civilizations including the Romans, Ottomans, and most recently the French."},
+  { "stage":4, "type":"country", "term":"Algeria", "cat":"Geography", "def":"Africa's largest country by land, bordered by the Mediterranean Sea to the North and consisting of mostly Saharan desert. Algiers is its Largest and capital city, the people speak both French and Arabic. Has been colonized by multiple civilizations including the Romans, Ottomans, and most recently the French."},
 
-  { "stage":4, "term":"Colombia", "cat":"Geography", "def":"Country in the  northwest of South America. Diverse nature encompasses the Andes, the Amazon rainforest, and both Pacific and Caribbean Coastlines. The capital Bogota is at high altitude and famous for restaurants and shopping. Its main legal export is coffee, however drug cartels exported cocaine and marijuana grown in the country, and the corruption that goes along with that, has been a huge problem for the government."},
+  { "stage":4, "type":"country", "term":"Colombia", "cat":"Geography", "def":"Country in the  northwest of South America. Diverse nature encompasses the Andes, the Amazon rainforest, and both Pacific and Caribbean Coastlines. The capital Bogota is at high altitude and famous for restaurants and shopping. Its main legal export is coffee, however drug cartels exported cocaine and marijuana grown in the country, and the corruption that goes along with that, has been a huge problem for the government."},
 
   { "stage":4, "term":"Aegean Sea", "cat":"Geography", "def":"Eastern arm of Mediterranean separating the Greek and Anatolian peninsulas. Lying in between Greek and Turkish mainlands, it is host to the popular vacationing spot Aegean islands. Also served as a trade route for ancient civilizations such as Rome, Greece, and Persia."},
 
-  { "stage":4, "term":"Costa Rica", "cat":"Geography", "def":"Former Spanish colony in Central America, bordered by Panama to the South, Nicaragua to the North, the Caribbean to the East and Pacific to the West. Rainforest and volcanoes fill its breathtaking landscape. The capital and largest city is San Jose, of 4.5 million people. Known for being one of the most developed nations in the region, with a liberal and peace loving culture. The country has no military."},
+  { "stage":4, "type":"country", "term":"Costa Rica", "cat":"Geography", "def":"Former Spanish colony in Central America, bordered by Panama to the South, Nicaragua to the North, the Caribbean to the East and Pacific to the West. Rainforest and volcanoes fill its breathtaking landscape. The capital and largest city is San Jose, of 4.5 million people. Known for being one of the most developed nations in the region, with a liberal and peace loving culture. The country has no military."},
 
-  { "stage":4, "term":"Austria", "cat":"Geography", "def":"Landlocked, German-speaking mountainous country in central Europe. Capital and largest city is Vienna. Alpine villages, skiing and hiking make it a tourist destination. Neutral since 1955, before that the country had experienced a century of violence, having its alliance with Hungary destroyed following World War One and then being annexed by the Nazis in World War Two."},
+  { "stage":4, "type":"country", "term":"Austria", "cat":"Geography", "def":"Landlocked, German-speaking mountainous country in central Europe. Capital and largest city is Vienna. Alpine villages, skiing and hiking make it a tourist destination. Neutral since 1955, before that the country had experienced a century of violence, having its alliance with Hungary destroyed following World War One and then being annexed by the Nazis in World War Two."},
 
   { "stage":4, "term":"Arabian Sea", "cat":"Geography", "def":"Part of the Indian Ocean. Borders India to the East, and the Arabian peninsula to the West. Since the second millennium BCE, it has been host to major trade routes. The sea includes the Gulf of Aden which feeds into the Red Sea and the Gulf of Oman, leading to the Persian Gulf."},
 
@@ -332,7 +332,7 @@
 
   { "stage":4, "term":"Black Sea", "cat":"Geography", "def":"Separating Europe and Asia, the sea is closed in by Ukraine, Russia, Georgia, Turkey, Bulgaria, and Romania. Receiver of multiple rivers such as the Danube and Dnieper. Important coastline cities include Istanbul and Odessa. It is a popular beach resort for Eastern Europeans."},
 
-  { "stage":4, "term":"Chile", "cat":"Geography", "def":"South American country that is long and narrow, with over six thousand kilometers of Pacific coastline to the West but only 350 kilometers at its widest points. Former Spanish colony. Bordered by Peru, Bolivia and Argentina. Unique in its location on the western slope of the Andes mountains, one of the world's only places where mountains are found immediately after coastline. Capital and largest city is Santiago at 4.3 million people."},
+  { "stage":4, "type":"country", "term":"Chile", "cat":"Geography", "def":"South American country that is long and narrow, with over six thousand kilometers of Pacific coastline to the West but only 350 kilometers at its widest points. Former Spanish colony. Bordered by Peru, Bolivia and Argentina. Unique in its location on the western slope of the Andes mountains, one of the world's only places where mountains are found immediately after coastline. Capital and largest city is Santiago at 4.3 million people."},
 
   { "stage":4, "term":"Mecca", "cat":"Geography", "def":"The holiest city in the religion of Islam lies in western Saudi Arabia. The Prophet Mohammed was born here. Millions of Muslim pilgrims make the annual trek to the sacred Mosque, where the Kaaba, Islam's holiest object where prayers are directed to, lies."},
 
@@ -352,7 +352,7 @@
 
   { "stage":6, "term":"Alexandria", "cat":"Geography", "def":"Founded by Alexander the Great in 331 BC, Egypt's second largest city lies where the Nile flows into the Mediterranean. Has a lighthouse that is one of the Seven Wonders of the Ancient World and a now-renovated, storied library. A former cultural hub to both Christians and Jews, and a current economic and industrial center to North Africa and the Middle East."},
 
-  { "stage":6, "term":"Albania", "cat":"Geography", "def":"Located in the Southeastern Balkans and bordering the Adriatic Sea, the former Eastern Bloc nation-state possesses a unique culture and language . Its capital and largest city is Tirana."},
+  { "stage":6, "type":"country", "term":"Albania", "cat":"Geography", "def":"Located in the Southeastern Balkans and bordering the Adriatic Sea, the former Eastern Bloc nation-state possesses a unique culture and language . Its capital and largest city is Tirana."},
 
   { "stage":6, "term":"Adriatic Sea", "cat":"Geography", "def":"Mediterranean Sea's northernmost arm. Borders Italy to the West and Croatia, Bosnia and Herzegovina, Albania, Montenegro, and Yugoslavia to the East. Home to over 1,300 mostly Croatian Islands and many famous coastline cities including Venice and Split."},
 
@@ -366,7 +366,142 @@
 
   { "stage":9, "term":"Aden", "cat":"Geography", "def":"Port city of 800,000 in southwestern Yemen. Used as a harbour since ancient times, it is at the Southern entrance of the Red Sea."},
 
-  { "stage":9, "term":"Aberdeen", "cat":"Geography", "def":"Scotland’s third most populous city, with an international population, on the North Sea, nicknamed the Granite City for its many grey stone buildings."}
+  { "stage":9, "term":"Aberdeen", "cat":"Geography", "def":"Scotland’s third most populous city, with an international population, on the North Sea, nicknamed the Granite City for its many grey stone buildings."},
+
+  { "stage":2, "type":"country", "term":"England", "cat":"Geography", "def":""},
+  { "stage":2, "type":"country", "term":"Greece", "cat":"Geography", "def":""},
+  { "stage":2, "type":"country", "term":"Indonesia", "cat":"Geography", "def":""},
+  { "stage":2, "type":"country", "term":"Israel", "cat":"Geography", "def":""},
+  { "stage":2, "type":"country", "term":"Italy", "cat":"Geography", "def":""},
+  { "stage":2, "type":"country", "term":"Mexico", "cat":"Geography", "def":""},
+  { "stage":2, "type":"country", "term":"Spain", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Argentina", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Bangladesh", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Cuba", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Netherlands, the", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Nigeria", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"North Korea", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Pakistan", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Saudi Arabia", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"South Africa", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"South Korea", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Switzerland", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Thailand", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Turkey", "cat":"Geography", "def":""},
+  { "stage":3, "type":"country", "term":"Vietnam", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Croatia", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Czech Republic, The", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Denmark", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Ethiopia", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Ghana", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Guatemala", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Haiti", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Kenya", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Malaysia", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Nepal", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Norway", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Philippines", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Poland", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Portugal", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Qatar", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Rwanda", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Scotland", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Singapore", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Sudan", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Sweden", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Taiwan", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Tibet", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Ukraine", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Vatican City State", "cat":"Geography", "def":""},
+  { "stage":4, "type":"country", "term":"Venezuela", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Belgium", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Bolivia", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Bulgaria", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Congo, Democratic Republic of", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Finland", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Greenland", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Hungary", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Ireland, Republic of", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Ivory Coast", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Jamaica", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Kazakhstan", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Kuwait", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Liberia", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Libya", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Madagascar", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Monaco", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Morocco", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Myanmar", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"New Zealand", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Nicaragua", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Northern Ireland", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Peru", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Romania", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Senegal", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Sierra Leone", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Slovakia", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Somalia", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Syria", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Tanzania", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"United Arab Emirates", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Uraguay", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Yemen", "cat":"Geography", "def":""},
+  { "stage":5, "type":"country", "term":"Zimbabwe", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Angola", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Armenia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Bahamas", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Bahrain", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Bosnia and Herzegovina", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Botswana", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Cambodia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Cameroon", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Cyprus", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Dominican Republic", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Ecuador", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"El Salvador", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Estonia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Fiji", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Georgia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Honduras", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Iceland", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Latvia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Lithuania", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Macedonia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Mongolia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Mozambique", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Namibia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Niger", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Oman", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Panama", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Paraguay", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Slovenia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Sri Lanka", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Tunisia", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Uganda", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Uzbekistan", "cat":"Geography", "def":""},
+  { "stage":6, "type":"country", "term":"Wales", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Azerbaijan", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Barbados", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Belarus", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Burundi", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Chad", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Congo, Republic of the", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Guinea", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Kyrgyzstan", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Laos", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Luxembourg", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Malawi", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Malta", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Tajikistan", "cat":"Geography", "def":""},
+  { "stage":7, "type":"country", "term":"Trinidad and Tobago", "cat":"Geography", "def":""},
+  { "stage":8, "type":"country", "term":"Burkina Faso", "cat":"Geography", "def":""},
+  { "stage":8, "type":"country", "term":"Eritrea", "cat":"Geography", "def":""},
+  { "stage":8, "type":"country", "term":"Liechtenstein", "cat":"Geography", "def":""},
+  { "stage":8, "type":"country", "term":"Mali", "cat":"Geography", "def":""},
+  { "stage":8, "type":"country", "term":"Moldova", "cat":"Geography", "def":""},
+  { "stage":8, "type":"country", "term":"Swaziland", "cat":"Geography", "def":""},
+  { "stage":8, "type":"country", "term":"Turkmenistan", "cat":"Geography", "def":""},
+  { "stage":8, "type":"country", "term":"Zambia", "cat":"Geography", "def":""}
 
 ]
 

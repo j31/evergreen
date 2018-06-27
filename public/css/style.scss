@@ -1,3 +1,21 @@
+// $success: grey; 
+// $primary: #ff2211; 
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+.feature-box {
+  background-color: darkgreen;
+  width: 220px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #A2C3A4;
+}
+
+.answer-field {
+  width: 300px;
+  margin: 0 auto;
+}
 
 // * {
 //   border: 1px solid red;

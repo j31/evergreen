@@ -20,6 +20,27 @@ router.get('/home', ensureLoggedIn(), (req, res, next) => {
 });
 
 
+/* GET geo quiz page */
+router.get('/quiz/geo', ensureLoggedIn(), (req, res, next) => {
+  var reqUser = req.user.username
+  Promise.all([
+    Term.find( {type: "country"} ),
+    User.find( {username: reqUser} )
+    ])
+  .then( results => {
+    
+    console.log ("countries ", results[0])
+    console.log ("userk ", results[1])
+
+    var countries = JSON.stringify(results[0]);
+    var userk = JSON.stringify(results[1]);
+    res.render('quiz/geo', {countries, userk});
+  })
+  .catch(error => { next(error) })
+});
+
+
+
 /* GET practice page */
 router.get('/practice', ensureLoggedIn(), (req, res, next) => {
   var reqUser = req.user.username
