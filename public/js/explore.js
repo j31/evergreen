@@ -124,17 +124,17 @@ $(document).ready(function() {
     // Find user's zero strength terms in current category 
     var termsInCategory = zeroStrengthTerms.filter( t => t.cat === app.user.currentCategory.category )
 
-    console.log("currentCategory ", app.user.currentCategory.category)
-    console.log("number of 0 strength terms in this Category ", termsInCategory)
+    // console.log("currentCategory ", app.user.currentCategory.category)
+    // console.log("number of 0 strength terms in this Category ", termsInCategory)
 
     // get up to 5 terms
-    var l = ( termsInCategory.length > 5 ? 5 : termsInCategory.length )
+    var l = ( termsInCategory.length > 10 ? 10 : termsInCategory.length )
     var quickScanTerms = []
     for (let i=0; i<l; i++) {
       var term = termsInCategory[i]._id
       quickScanTerms.push( app.dict.find( t => t._id == term ) )
     }
-    console.log("quick scan terms from dict ", quickScanTerms)
+    // console.log("quick scan terms from dict ", quickScanTerms)
 
     
     var html = '<div id="accordion">'
@@ -157,7 +157,7 @@ $(document).ready(function() {
         </div>
       </div>`
     }
-    html+= '</div><br><br><a id="start-btn" class="btn btn-outline-success btn-xl"  href="/explore">Refresh List</a>'
+    html+= '</div><br><br><a id="start-btn" class="btn btn-outline-success btn-xl"  href="/explore">Continue</a>'
     $('#quickScanTerms').html(html)
 
     $(".know-it-btn").click(function() {
@@ -174,7 +174,7 @@ $(document).ready(function() {
 
       console.log("knowledge ", knowledge)
 
-      axios.patch(`http://localhost:3000/knowledge/${username}`, knowledge)
+      axios.patch(`/knowledge/${username}`, knowledge)
       .then(response => {
         console.log("User knowledge Axios update to term, ", term)
       })

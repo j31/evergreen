@@ -291,7 +291,7 @@ $(document).ready(function() {
     
     //SAVE user knowledge to MongoDB
     
-    axios.patch(`http://localhost:3000/knowledge/${username}`, knowledge)
+    axios.patch(`knowledge/${username}`, knowledge)
     .then(response => {
       console.log("User knowledge successfully updated")
       console.log("knowledge ", knowledge)
@@ -502,7 +502,6 @@ $(document).ready(function() {
             randomIndex = Math.floor(Math.random() * termsInCategory.length)
             randomId = termsInCategory[randomIndex]._id
           }
-          
           
           // look this random ID up in the dictionary
           var term = ev.dict.find(function(t) {

@@ -175,7 +175,7 @@ $(document).ready(function() {
       $('#answer').focus()
 
       $('#check-answer-btn').removeClass('d-none');
-      $("#check-answer-btn").addClass('disabled')
+  
 
       // working on disable answer button before answer feature
       // listen on change in answer box
@@ -319,9 +319,9 @@ $(document).ready(function() {
  
       var html = "<table><tr><th style='width: 300px; font-weight: bold'>Country</th><th style='width: 100px; font-weight: bold'>Score</th></tr>"
       for (let i in countryScores) {
-        
+        if ( countryScores[i].score > 0 ) {
         html += `<tr><td>${countryScores[i].country}</td><td>${countryScores[i].score}</td></tr>`
-        console.log(html)
+         }
       }
       html += "</table>"
 
