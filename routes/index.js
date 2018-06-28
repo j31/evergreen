@@ -63,7 +63,7 @@ router.get('/quiz/geo', ensureLoggedIn(), (req, res, next) => {
 
     console.log("sum ", sum)
     for (var i=0; i < scoresByCountry.length; i++) {
-      scoresByCountry[i].score = Math.round( (scoresByCountry[i].score / sum) * 50)
+      scoresByCountry[i].score = Math.round( (scoresByCountry[i].score / sum) * 100)
       console.log("scoresByCountry ", scoresByCountry[i])
     }
     
