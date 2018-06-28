@@ -25,19 +25,62 @@ router.get('/quiz/geo', ensureLoggedIn(), (req, res, next) => {
   var reqUser = req.user.username
   Promise.all([
     Term.find( {type: "country"} ),
-    User.find( {username: reqUser} )
+    User.find( {username: reqUser} ),
+    User.find()
     ])
   .then( results => {
     
-    console.log ("countries ", results[0])
-    console.log ("userk ", results[1])
+    var scores = []
+    for (var i in results[2]) {
+      var countryScores = results[2][i].knowledge.filter( k => k.type === "country")
+      var score = countryScores.reduce((a,b) => a + b.strength, 0);
+      scores.push( {'username': results[2][i].username, 'score':score} )
+
+      var sortedScores = scores.sort(function(obj1, obj2) {
+        return obj2.score - obj1.score;
+      });
+    }
+
+   
+    // Find all user country scores
+    var allUsersScores = [];
+    for (var i in results[2]) {
+      var countryScores = results[2][i].knowledge.filter( k => k.type === "country")
+      allUsersScores.push(...countryScores)
+    }
+
+    // console.log ("allUsersScores", allUsersScores)
+    // console.log("countries ", results[0])
+    
+    var countries = results[0]
+    var scoresByCountry = []
+
+    for (var i = 0; i < countries.length; i++) {
+      var oneCountryScores = allUsersScores.filter( e => e._id == countries[i]._id )
+      oneCountryScore = oneCountryScores.reduce((a,b) => a + b.strength, 0);
+      scoresByCountry.push( {'country': countries[i].term, 'score':oneCountryScore} )
+    }
+
+    var sortedCountryScores = scoresByCountry.sort(function(obj1, obj2) {
+      return obj2.score - obj1.score;
+    });
+    
+
+    // console.log ("countries ", results[0])
+    // console.log ("userk ", results[1])
+    // console.log ("leaderboard ", leaderboard)
+    // console.log ("countryScores", countryScores)
 
     var countries = JSON.stringify(results[0]);
     var userk = JSON.stringify(results[1]);
-    res.render('quiz/geo', {countries, userk});
+    var leaderboard = JSON.stringify(sortedScores);
+    var countryScores = JSON.stringify(sortedCountryScores);
+
+    res.render('quiz/geo', {countries, userk, leaderboard, countryScores});
   })
   .catch(error => { next(error) })
 });
+
 
 
 

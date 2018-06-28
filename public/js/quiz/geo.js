@@ -12,11 +12,18 @@ $(document).ready(function() {
   var dataFromView = $('#userk_data').html();
   var userk = JSON.parse(dataFromView);
   var knowledge = userk[0].knowledge; 
-  
+
+  var dataFromView = $('#leaderboard_data').html();
+  var leaderboard = JSON.parse(dataFromView);
+
+  var dataFromView = $('#countryScores_data').html();
+  var countryScores = JSON.parse(dataFromView);
+
+
   console.log("countries ", countries );
   console.log("knowledge ", knowledge );
-
-
+  console.log("leaderboard ", leaderboard );
+  console.log("countryScores ", countryScores );
 
   // User class
   class User {
@@ -42,7 +49,7 @@ $(document).ready(function() {
 
       $('footer').addClass('d-none');
 
-      // Show start section
+      // Start Button
       $('#start-btn').unbind('click');
       $('#start-btn').click(function(){
         $('#continue-btn').addClass('d-none');
@@ -51,6 +58,25 @@ $(document).ready(function() {
  
         geo.initializeQuiz();
       });
+
+      // Leaderboard Link
+      $('#leaderboard-btn').unbind('click');
+      $('#leaderboard-btn').click(function(){
+        $('#continue-btn').addClass('d-none');
+        $('#start').addClass('d-none');
+ 
+        geo.showLeaderboard();
+      });
+
+      // Show Countries Link
+      $('#countries-btn').unbind('click');
+      $('#countries-btn').click(function(){
+        $('#continue-btn').addClass('d-none');
+        $('#start').addClass('d-none');
+  
+        geo.showCountryScores()
+      });
+
     }
 
     initializeQuiz() {
@@ -111,7 +137,6 @@ $(document).ready(function() {
         this.getQuestionOrder();
       else {
         geo.knowledgeTerm = geo.questions[geo.questionNumber].country
-        this.questionNumber += 1
       }
 
       console.log("questionNumber ", this.questionNumber)
@@ -173,7 +198,7 @@ $(document).ready(function() {
 
       // hide check-answer button
       $('#check-answer-btn').addClass('d-none');
-
+      this.questionNumber += 1
 
       // if correct
       if ( userAnswer.toLowerCase() === geo.knowledgeTerm.term.toLowerCase() ) {
@@ -191,7 +216,7 @@ $(document).ready(function() {
         
         console.log("DEBUG i, ", i)
 
-        if ( knowledge[i].strength <= 5 ) {
+        if ( knowledge[i].strength < 5 ) {
           knowledge[i].strength += 1; 
         }
 
@@ -229,7 +254,6 @@ $(document).ready(function() {
       //  bind correction logic to CONTINUTE
       $('#continue-btn').unbind('click');
       $('#continue-btn').click(function(){
-        
         onContinue();
       });
 
@@ -260,10 +284,32 @@ $(document).ready(function() {
 
     showLeaderboard() {
       // show table of players, #countries known, overall strength score
+      $('#leaderboard-section').removeClass('d-none');
+ 
+      var html = "<table><tr><th style='width: 300px; font-weight: bold'>Username</th><th style='width: 100px; font-weight: bold'>Score</th></tr>"
+      for (let i in leaderboard) {
+        
+        html += `<tr><td>${leaderboard[i].username}</td><td>${leaderboard[i].score}</td></tr>`
+        console.log(html)
+      }
+      html += "</table>"
+
+      $('#leaderboard-list').html(html);
     };
 
-    showCountryKnowledge(){
+    showCountryScores(){
       // show table of countries, ordered by average score
+      $('#countryScores-section').removeClass('d-none');
+ 
+      var html = "<table><tr><th style='width: 300px; font-weight: bold'>Country</th><th style='width: 100px; font-weight: bold'>Score</th></tr>"
+      for (let i in countryScores) {
+        
+        html += `<tr><td>${countryScores[i].country}</td><td>${countryScores[i].score}</td></tr>`
+        console.log(html)
+      }
+      html += "</table>"
+
+      $('#countryScores-list').html(html);
     };
 
   };

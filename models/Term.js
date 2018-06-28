@@ -4,6 +4,7 @@ const Schema   = mongoose.Schema;
 const termSchema = new Schema({
   term: {type: String, required: true, unique: true}, 
   def: {type: String},
+  type: {type: String},
   cat: {type: String, required: true},
   stage: Number,
 }, {

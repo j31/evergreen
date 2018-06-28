@@ -48,7 +48,7 @@ authRoutes.post("/signup", (req, res, next) => {
     var initKnowledge = []
     Term.find({}, function(err, terms) {
       terms.forEach(function(term) {
-        initKnowledge.push({ _id: term._id, cat: term.cat, strength: 0})
+        initKnowledge.push({ _id: term._id, cat: term.cat, type: term.type, strength: 0})
       });
 
       const newUser = new User({

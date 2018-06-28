@@ -24,9 +24,9 @@
       <div class="col-md-6 mx-auto">
       <a id="start-btn" class="btn btn-outline-success btn-xl"  href="#">Start the Quiz!</a>
       <br><br><br><br>
-      <a href="">Leaderboard</a> 
+      <a id="leaderboard-btn" class="btn btn-link">Leaderboard</a> 
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="">Country Scores</a>
+      <a id="countries-btn" class="btn btn-link">Countries</a>
      
       </div>
     </div>
@@ -72,6 +72,37 @@
   <br><br><br>
 </div>
 
+<div id="leaderboard-section" class="text-center d-none">
+  <br>
+  <br>
+  <div class="container">
+  <div id="leaderboard-list"></div>
+  </div>
+  <br>  
+  <br>
+  <div class="col-md-6 mx-auto">
+    <a class="btn btn-outline-success btn-xl"  href="/quiz/geo">Continue</a>
+  </div>
+  <br><br><br>
+</div>
+
+<div id="countryScores-section" class="text-center d-none">
+  <br>
+  <br>
+  <div class="container">
+  <div id="countryScores-list"></div>
+  </div>
+  <br>  
+  <br>
+  <div class="col-md-6 mx-auto">
+    <a class="btn btn-outline-success btn-xl"  href="/quiz/geo">Continue</a>
+  </div>
+  <br><br><br>
+</div>
+
+
+
+
 
 
 {{!-- jQuery CDN --}}
@@ -91,6 +122,8 @@
 <script id="countries_data" type="text/javascript">{{{countries}}}</script>
 <script id="username_data" type="text/javascript">"{{{username}}}"</script>
 <script id="userk_data" type="text/javascript">{{{userk}}}</script>
+<script id="leaderboard_data" type="text/javascript">{{{leaderboard}}}</script>
+<script id="countryScores_data" type="text/javascript">{{{countryScores}}}</script>
 
 </body>
 </html>

@@ -157,7 +157,7 @@ $(document).ready(function() {
         </div>
       </div>`
     }
-    html+= '</div>'
+    html+= '</div><br><br><a id="start-btn" class="btn btn-outline-success btn-xl"  href="/explore">Refresh List</a>'
     $('#quickScanTerms').html(html)
 
     $(".know-it-btn").click(function() {
@@ -187,9 +187,6 @@ $(document).ready(function() {
 
   }
 
-
-
-  
 
  // Start main app
  app.getCategoryChoices()
