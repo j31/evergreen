@@ -6,6 +6,7 @@ const termSchema = new Schema({
   def: {type: String},
   type: {type: String},
   cat: {type: String, required: true},
+  altTerms: [String],
   stage: Number,
 }, {
   timestamps: {

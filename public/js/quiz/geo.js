@@ -175,11 +175,21 @@ $(document).ready(function() {
       $('#answer').focus()
 
       $('#check-answer-btn').removeClass('d-none');
+      $("#check-answer-btn").addClass('disabled')
+
+      // working on disable answer button before answer feature
+      // listen on change in answer box
+      // $('#answer').on('change keyup paste', function() {
+      //   $("#check-answer-btn").removeClass('disabled')
+      // });
+      // add to bind on enter key
+      // && !$("#check-answer-btn").hasClass("disabled")
+
 
       // listen on "enter" key
       $(document).unbind('keypress');
       $(document).keypress(function(e) {
-        if(e.which == 13 && !$("#game-check-btn").hasClass("disabled")) {
+        if(e.which == 13) {
           var userAnswer = $('#answer').val();
           geo.checkUserAnswer(userAnswer);
         }
@@ -200,8 +210,12 @@ $(document).ready(function() {
       $('#check-answer-btn').addClass('d-none');
       this.questionNumber += 1
 
+      console.log(geo.knowledgeTerm.altTerms)
+      let c1 = userAnswer.toUpperCase() === geo.knowledgeTerm.term.toUpperCase() 
+      let c2 = ( geo.knowledgeTerm.altTerms ? geo.knowledgeTerm.altTerms.includes(userAnswer.toUpperCase()) : false )
+
       // if correct
-      if ( userAnswer.toLowerCase() === geo.knowledgeTerm.term.toLowerCase() ) {
+      if ( c1 || c2 ) {
         console.log("Correct!")
         $('.correct').removeClass('d-none');
         this.numberCorrect += 1;
@@ -225,7 +239,9 @@ $(document).ready(function() {
 
 
         // update user knowledge in Database
-        axios.patch(`http://localhost:3000/knowledge/${username}`, knowledge)
+        // axios.patch(`http://localhost:3000/knowledge/${username}`, knowledge)
+
+        axios.patch(`/knowledge/${username}`, knowledge)
         .then(response => {
           console.log("User knowledge updated")
         })
