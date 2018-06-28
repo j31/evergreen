@@ -122,12 +122,12 @@ console.log(geo.questionNumber)
         var strength = geo.user.knowledge.find ( k => k._id = countries[i]._id ).strength
 
         console.log("strength ", strength)
-        // strength 0-5 --> 16, 81, 128 ... 
-        var chance = (strength) * ( strength + 5 ) 
+        // strength 0-5 --> 16, 81, 128 ... ?? not saving user scores
+        var chance = (strength) * ( strength + 2 ) 
         console.log ("******************* chance1 ", chance)
 
-        // stage  1-9 --> 3,6,9,12,15... 27
-        chance += ( countries[i].stage * 3 )
+        // stage  1-9 
+        chance += ( countries[i].stage )
         console.log ("******************* chance2 ", chance)
 
         // add a random factor (adding 0-9 to weight)
@@ -252,12 +252,12 @@ console.log(geo.questionNumber)
 
         var id = geo.knowledgeTerm._id
 
-        console.log("DEBUG id, ", id)
-        console.log("DEBUG geo.knowledgeTerm, ", geo.knowledgeTerm)
+        // console.log("DEBUG id, ", id)
+        // console.log("DEBUG geo.knowledgeTerm, ", geo.knowledgeTerm)
     
         var i = knowledge.findIndex(x => x._id === id);
         
-        console.log("DEBUG i, ", i)
+        // console.log("DEBUG i, ", i)
 
         if ( knowledge[i].strength < 5 ) {
           knowledge[i].strength += 1; 
