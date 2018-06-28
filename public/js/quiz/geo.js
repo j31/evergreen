@@ -122,27 +122,25 @@ console.log(geo.questionNumber)
         var strength = geo.user.knowledge.find ( k => k._id = countries[i]._id ).strength
 
         console.log("strength ", strength)
-        // strength 0-5 --> 8, 27, 64, 125, 343
-        var chance = Math.pow( (strength + 2), 3 )
-        // console.log ("******************* chance1 ", chance)
+        // strength 0-5 --> 16, 81, 128 ... 
+        var chance = (strength) * ( strength + 5 ) 
+        console.log ("******************* chance1 ", chance)
 
-        // stage  1-9 --> 2,4,6,8 ... 18
-        chance += ( countries[i].stage * 2 )
-        // console.log ("******************* chance2 ", chance)
+        // stage  1-9 --> 3,6,9,12,15... 27
+        chance += ( countries[i].stage * 3 )
+        console.log ("******************* chance2 ", chance)
 
         // add a random factor (adding 0-9 to weight)
         chance += Math.floor(Math.random() * 10 );
-        // console.log ("******************* chance3 ", chance)
+        console.log ("******************* chance3 ", chance)
 
         // subtact for community knowledge
         var c = countryScores.find( e => e.country == countries[i].term )
         chance -= c.score 
-        // console.log ("******************* chance4 ", chance)
+        console.log ("******************* chance4 ", chance)
 
-        if (chance < 0)
-          chance = 0
 
-        // console.log ("******************* chance Final ", chance)
+        console.log ("******************* chance Final ", chance)
 
         temp.push( { "country" : countries[i], "weight" : chance } )
       }
