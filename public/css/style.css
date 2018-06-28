@@ -6282,12 +6282,30 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-.feature-box {
-  background-color: darkgreen;
+a:hover {
+  text-decoration: none; }
+
+.footer-text {
+  color: lightgray; }
+
+.footer-text a {
+  color: lightgray; }
+
+.feature-box-active {
   width: 175px;
   margin: 0 auto;
   padding: 20px;
-  color: #A2C3A4; }
+  color: #A2C3A4;
+  border-width: 5px;
+  background-color: darkgreen;
+  margin-bottom: 30px; }
+
+.feature-box-beta {
+  width: 175px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #A2C3A4;
+  border-width: 5px; }
 
 .answer-field {
   width: 300px;

@@ -97,7 +97,20 @@ $(document).ready(function() {
       });
     };
 
-    
+    // Update progress (question number)
+    updateProgress () {
+  
+      // calculate percent done of 10 question set
+      var percentDone = (geo.questionNumber)*10;
+      
+console.log(geo.questionNumber)
+
+      // build HTML
+      var html = '<div class="progress-bar bg-success" role="progressbar" style="height: 10px;width: ' + percentDone +  '%"></div>'
+      
+      // update DOM
+      // $('#progress').html(html);
+    }
 
     getQuestionOrder() {
       // create array of Terms in order
@@ -139,11 +152,14 @@ $(document).ready(function() {
         geo.knowledgeTerm = geo.questions[geo.questionNumber].country
       }
 
-      console.log("questionNumber ", this.questionNumber)
-      console.log("knowledgeTerm ", this.knowledgeTerm)
+      // console.log("questionNumber ", this.questionNumber)
+      // console.log("knowledgeTerm ", this.knowledgeTerm)
 
       // for testing, put answer on page
-      $('#country').html(this.knowledgeTerm.term)
+      // $('#country').html(this.knowledgeTerm.term)
+
+    
+
 
       this.displayMap();
     };
