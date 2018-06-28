@@ -49,18 +49,24 @@ router.get('/quiz/geo', ensureLoggedIn(), (req, res, next) => {
       allUsersScores.push(...countryScores)
     }
 
-    // console.log ("allUsersScores", allUsersScores)
-    // console.log("countries ", results[0])
-    
     var countries = results[0]
     var scoresByCountry = []
 
     for (var i = 0; i < countries.length; i++) {
       var oneCountryScores = allUsersScores.filter( e => e._id == countries[i]._id )
       oneCountryScore = oneCountryScores.reduce((a,b) => a + b.strength, 0);
+    
       scoresByCountry.push( {'country': countries[i].term, 'score':oneCountryScore} )
     }
 
+    var sum = scoresByCountry.reduce((a,b) => a + b.score, 0);
+
+    console.log("sum ", sum)
+    for (var i=0; i < scoresByCountry.length; i++) {
+      scoresByCountry[i].score = Math.round( (scoresByCountry[i].score / sum) * 50)
+      console.log("scoresByCountry ", scoresByCountry[i])
+    }
+    
     var sortedCountryScores = scoresByCountry.sort(function(obj1, obj2) {
       return obj2.score - obj1.score;
     });

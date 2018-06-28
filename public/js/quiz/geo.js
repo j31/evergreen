@@ -121,13 +121,28 @@ console.log(geo.questionNumber)
         // get user strength score or this term and square it
         var strength = geo.user.knowledge.find ( k => k._id = countries[i]._id ).strength
 
-        var chance = Math.pow( strength, 2 )
+        console.log("strength ", strength)
+        // strength 0-5 --> 0, 1, 8, 27, 64, 125
+        var chance = Math.pow( strength, 3 )
+        // console.log ("******************* chance1 ", chance)
 
-        // add to chance factor the stage squared
-        chance += Math.pow(countries[i].stage, 2)
+        // stage  1-9 --> 2,4,6,8 ... 18
+        chance += ( countries[i].stage * 2 )
+        // console.log ("******************* chance2 ", chance)
 
         // add a random factor (adding 0-9 to weight)
         chance += Math.floor(Math.random() * 10 );
+        // console.log ("******************* chance3 ", chance)
+
+        // substact for community knowledge
+        var c = countryScores.find( e => e.country == countries[i].term )
+        chance -= c.score 
+        // console.log ("******************* chance4 ", chance)
+
+        if (chance < 0)
+          chance = 0
+
+        // console.log ("******************* chance Final ", chance)
 
         temp.push( { "country" : countries[i], "weight" : chance } )
       }
