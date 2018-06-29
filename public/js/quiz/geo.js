@@ -124,11 +124,11 @@ $(document).ready(function() {
      
         // strength 0-5 --> 16, 81, 128 ... ?? not saving user scores
         if (strength = 1)
-          var chance = 6
+          var chance = 10
         else if (strength = 2)
-          var chance = 12
+          var chance = 20
         else
-          var chance = (strength) * ( strength + 3 ) 
+          var chance = ( strength * strength ) + 20
 
         // console.log ("******************* chance1 ", chance)
 
