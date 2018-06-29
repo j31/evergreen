@@ -3,7 +3,19 @@
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
+
+
+#country-img {
+  height: 200px;
+}
+
 a:hover { text-decoration: none; }
+
+
+#answer-box {
+  height: 70px;
+}
+
 
 .footer-text {
   color: lightgray;

@@ -160,6 +160,27 @@ $(document).ready(function() {
       
       console.log("questions ", geo.questions);
 
+
+      for (let i=0; i < geo.questions.length; i++) {
+
+      // make country name lowercase and add .gif
+      var imgFileName = (geo.questions[i].country.term).toLowerCase() + ".gif"
+
+      // // replace spaces in filename with underscore
+      imgFileName =  imgFileName.replace(/\s/g, '_')
+      
+      // temporarily use this image
+      var imgURL = `https://evg.herokuapp.com/img/quiz/geo/countries/${imgFileName}`
+
+      console.log("imgURL ", imgURL);
+        let img1 = new Image();
+        img1.src = imgURL;
+      }
+      
+      
+
+
+
       this.getNextQuestion();
     }
 
@@ -194,9 +215,8 @@ $(document).ready(function() {
       // replace spaces in filename with underscore
       imgFileName =  imgFileName.replace(/\s/g, '_')
       
-
       // temporarily use this image
-      var imgURL = '<img width="200" src="/img/quiz/geo/countries/' + imgFileName + '">'
+      var imgURL = '<img id="country-img" src="/img/quiz/geo/countries/' + imgFileName + '">'
 
     
       // display image on page
