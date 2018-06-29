@@ -20,10 +20,10 @@ $(document).ready(function() {
   var countryScores = JSON.parse(dataFromView);
 
 
-  console.log("countries ", countries );
-  console.log("knowledge ", knowledge );
-  console.log("leaderboard ", leaderboard );
-  console.log("countryScores ", countryScores );
+  // console.log("countries ", countries );
+  // console.log("knowledge ", knowledge );
+  // console.log("leaderboard ", leaderboard );
+  // console.log("countryScores ", countryScores );
 
   // User class
   class User {
@@ -97,20 +97,20 @@ $(document).ready(function() {
       });
     };
 
-    // Update progress (question number)
-    updateProgress () {
+//     // Update progress (question number)
+//     updateProgress () {
   
-      // calculate percent done of 10 question set
-      var percentDone = (geo.questionNumber)*10;
+//       calculate percent done of 10 question set
+//       var percentDone = (geo.questionNumber)*10;
       
-console.log(geo.questionNumber)
+// console.log(geo.questionNumber)
 
-      // build HTML
-      var html = '<div class="progress-bar bg-success" role="progressbar" style="height: 10px;width: ' + percentDone +  '%"></div>'
+//       build HTML
+//       var html = '<div class="progress-bar bg-success" role="progressbar" style="height: 10px;width: ' + percentDone +  '%"></div>'
       
-      // update DOM
-      // $('#progress').html(html);
-    }
+//       update DOM
+//       $('#progress').html(html);
+//     }
 
     getQuestionOrder() {
       // create array of Terms in order
@@ -119,28 +119,34 @@ console.log(geo.questionNumber)
       for ( let i=0; i < countries.length; i++ ) {
         
         // get user strength score or this term and square it
-        var strength = geo.user.knowledge.find ( k => k._id = countries[i]._id ).strength
-
-        console.log("strength ", strength)
+        var strength = knowledge.find( k => k._id == countries[i]._id ).strength
+        
+     
         // strength 0-5 --> 16, 81, 128 ... ?? not saving user scores
-        var chance = (strength) * ( strength + 2 ) 
-        console.log ("******************* chance1 ", chance)
+        if (strength = 1)
+          var chance = 6
+        else if (strength = 2)
+          var chance = 12
+        else
+          var chance = (strength) * ( strength + 3 ) 
+
+        // console.log ("******************* chance1 ", chance)
 
         // stage  1-9 
-        chance += ( countries[i].stage )
-        console.log ("******************* chance2 ", chance)
+        chance += ( countries[i].stage * 2)
+        // console.log ("******************* chance2 ", chance)
 
         // add a random factor (adding 0-9 to weight)
         chance += Math.floor(Math.random() * 10 );
-        console.log ("******************* chance3 ", chance)
+        // console.log ("******************* chance3 ", chance)
 
         // subtact for community knowledge
         var c = countryScores.find( e => e.country == countries[i].term )
         chance -= c.score 
-        console.log ("******************* chance4 ", chance)
+        // console.log ("******************* chance4 ", chance)
 
 
-        console.log ("******************* chance Final ", chance)
+        // console.log ("******************* chance Final ", chance)
 
         temp.push( { "country" : countries[i], "weight" : chance } )
       }
@@ -150,7 +156,7 @@ console.log(geo.questionNumber)
         return obj1.weight - obj2.weight;
       });
       
-      console.log("questions ", geo.questions);
+      // console.log("questions ", geo.questions);
 
       this.getNextQuestion();
     }
@@ -252,23 +258,11 @@ console.log(geo.questionNumber)
 
         var id = geo.knowledgeTerm._id
 
-        // console.log("DEBUG id, ", id)
-        // console.log("DEBUG geo.knowledgeTerm, ", geo.knowledgeTerm)
-    
         var i = knowledge.findIndex(x => x._id === id);
         
-        // console.log("DEBUG i, ", i)
-
         if ( knowledge[i].strength < 5 ) {
           knowledge[i].strength += 1; 
         }
-
-        console.log("New strength is ", knowledge[i].strength )
-
-
-
-        // update user knowledge in Database
-        // axios.patch(`http://localhost:3000/knowledge/${username}`, knowledge)
 
         axios.patch(`/knowledge/${username}`, knowledge)
         .then(response => {
@@ -317,11 +311,23 @@ console.log(geo.questionNumber)
       $('#results').removeClass('d-none');
       console.log("number correct ", this.numberCorrect)
       
-      // var percentageCorrect = (geo.numberCorrect / geo.questionNumber * 100).toFixed(0);
+      var percentageCorrect = (geo.numberCorrect / geo.questionNumber * 100).toFixed(0);
+      var yourScores = knowledge.filter( k => k.cat === "Geography")
+      var yourScore = yourScores.reduce((a,b) => a + b.strength, 0);
 
-      var html = `<h3>You got ${geo.numberCorrect} out of ${geo.questionNumber} correct.</h3><br><br>`
+      var html =""
+      if (geo.numberCorrect > 0 ) {
+      html = `<h4>You got ${geo.numberCorrect} out of ${geo.questionNumber} correct.</h4><br><br>`
+      }
+
+      html += `<h2>Your score: ${yourScore}</h2><br>`
      
-      html += `<h1>Well done!</h1>`
+      if (geo.numberCorrect > 10 )
+        html += `<h1>Amazing!</h1>`
+      else if (geo.numberCorrect > 5 )
+      html += `<h1>Great!</h1>`
+      else if (geo.numberCorrect > 0 )
+        html += `<h1>Well done!</h1>`
 
       $('#results-list').html(html);
 
@@ -331,7 +337,7 @@ console.log(geo.questionNumber)
       // show table of players, #countries known, overall strength score
       $('#leaderboard-section').removeClass('d-none');
  
-      var html = "<table><tr><th style='width: 300px; font-weight: bold'>Username</th><th style='width: 100px; font-weight: bold'>Score</th></tr>"
+      var html = "<table><tr><th style='width: 300px; font-weight: bold'>Username</th><th style='width: 100px; font-weight: bold'>Points</th></tr>"
       for (let i in leaderboard) {
         
         html += `<tr><td>${leaderboard[i].username}</td><td>${leaderboard[i].score}</td></tr>`
@@ -346,7 +352,7 @@ console.log(geo.questionNumber)
       // show table of countries, ordered by average score
       $('#countryScores-section').removeClass('d-none');
  
-      var html = "<table><tr><th style='width: 300px; font-weight: bold'>Country</th><th style='width: 100px; font-weight: bold'>Score</th></tr>"
+      var html = "<table><tr><th style='width: 300px; font-weight: bold'>Country</th><th style='width: 100px; font-weight: bold'>Weight</th></tr>"
       for (let i in countryScores) {
         if ( countryScores[i].score > 0 ) {
         html += `<tr><td>${countryScores[i].country}</td><td>${countryScores[i].score}</td></tr>`
@@ -365,7 +371,7 @@ console.log(geo.questionNumber)
 
   // Instantiate Geo Quiz session object
   var geo = new GeoQuiz (user, countries );
-  console.log("geo ", geo)
+
   
   geo.startSection()
 
