@@ -196,7 +196,7 @@ $(document).ready(function() {
         geo.showResults();
       };
 
-      let html = `${geo.questionNumber} / 20`
+      let html = `${geo.questionNumber+1} / 20`
       $('#question-num').html(html)
 
       if ( geo.questionNumber >= countries.length-1 )
