@@ -188,19 +188,22 @@ $(document).ready(function() {
     getNextQuestion() {
       // get next country (term)
 
+      if ( geo.questionNumber >= 20 ) {
+        $('#navigation').removeClass('d-none');
+        $('footer').removeClass('d-none');
+        $('#quiz').addClass('d-none');
+        $('#close-btn').addClass('d-none');
+        geo.showResults();
+      };
+
+      let html = `${geo.questionNumber} / 20`
+      $('#question-num').html(html)
+
       if ( geo.questionNumber >= countries.length-1 )
         this.getQuestionOrder();
       else {
         geo.knowledgeTerm = geo.questions[geo.questionNumber].country
       }
-
-      // console.log("questionNumber ", this.questionNumber)
-      // console.log("knowledgeTerm ", this.knowledgeTerm)
-
-      // for testing, put answer on page
-      // $('#country').html(this.knowledgeTerm.term)
-
-    
 
 
       this.displayMap();
