@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 
   // console.log("countries ", countries );
-  // console.log("knowledge ", knowledge );
+  console.log("knowledge ", knowledge );
   // console.log("leaderboard ", leaderboard );
   // console.log("countryScores ", countryScores );
 
@@ -123,30 +123,32 @@ $(document).ready(function() {
         
      
         // strength 0-5 --> 16, 81, 128 ... ?? not saving user scores
-        if (strength = 1)
+        if (strength == 1)
           var chance = 10
-        else if (strength = 2)
-          var chance = 20
+        else if (strength == 2)
+          var chance = 15
         else
-          var chance = ( strength * strength ) + 20
+          var chance = ( strength * strength ) + 10;
 
-        // console.log ("******************* chance1 ", chance)
+        console.log ("******************* chance1 ", chance)
 
         // stage  1-9 
         chance += ( countries[i].stage * 2)
-        // console.log ("******************* chance2 ", chance)
+        console.log ("******************* chance2 ", chance)
 
         // add a random factor (adding 0-9 to weight)
         chance += Math.floor(Math.random() * 10 );
-        // console.log ("******************* chance3 ", chance)
+        console.log ("******************* chance3 ", chance)
 
         // subtact for community knowledge
         var c = countryScores.find( e => e.country == countries[i].term )
         chance -= c.score 
-        // console.log ("******************* chance4 ", chance)
+
+        console.log ("cscore ", c.score)
+        console.log ("******************* chance4 ", chance)
 
 
-        // console.log ("******************* chance Final ", chance)
+        console.log ("******************* chance Final ", chance)
 
         temp.push( { "country" : countries[i], "weight" : chance } )
       }
@@ -156,7 +158,7 @@ $(document).ready(function() {
         return obj1.weight - obj2.weight;
       });
       
-      // console.log("questions ", geo.questions);
+      console.log("questions ", geo.questions);
 
       this.getNextQuestion();
     }
@@ -196,8 +198,7 @@ $(document).ready(function() {
       // temporarily use this image
       var imgURL = '<img width="200" src="/img/quiz/geo/countries/' + imgFileName + '">'
 
-      console.log(imgURL)
-      
+    
       // display image on page
       $('#country-image').html(imgURL)
 
@@ -245,7 +246,7 @@ $(document).ready(function() {
       $('#check-answer-btn').addClass('d-none');
       this.questionNumber += 1
 
-      console.log(geo.knowledgeTerm.altTerms)
+     
       let c1 = userAnswer.toUpperCase() === geo.knowledgeTerm.term.toUpperCase() 
       let c2 = ( geo.knowledgeTerm.altTerms ? geo.knowledgeTerm.altTerms.includes(userAnswer.toUpperCase()) : false )
 
@@ -264,6 +265,7 @@ $(document).ready(function() {
           knowledge[i].strength += 1; 
         }
 
+        console.log("UPDATING THIS ONE ", knowledge[i])
         axios.patch(`/knowledge/${username}`, knowledge)
         .then(response => {
           console.log("User knowledge updated")
